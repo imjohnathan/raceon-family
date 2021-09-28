@@ -335,6 +335,11 @@
     <Testimonies />
     </section>
 
+    <section>
+      <Title title="適用族群" />
+    <Suitable />
+    </section>
+
   </main>
 
 </template>
@@ -343,6 +348,7 @@ import ProductSection from "./components/ProductSection.vue";
 import Title from "./components/Title.vue";
 import SamllProductsSection from "./components/SamllProductsSection.vue";
 import Testimonies from "./components/Testimonies.vue";
+import Suitable from "./components/Suitable.vue";
 </script>
 
 <script>
@@ -351,7 +357,8 @@ export default {
     Title,
     ProductSection,
     SamllProductsSection,
-    Testimonies
+    Testimonies,
+    Suitable
   },
   data: function () {
     return {

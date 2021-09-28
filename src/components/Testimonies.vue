@@ -15,7 +15,7 @@
             <h2 class="w-font-normal">
             {{kol.name}}<span class="w-text-lg">／{{kol.job}}</span>
             </h2>
-            <p v-html="kol.content" class="w-text-base">
+            <p v-html="kol.content" class="w-text-base w-leading-7">
             </p>
             </div>
             <div class="w-flex w-relative w-z-1">
@@ -34,7 +34,7 @@
                 >
                 我最推薦
                 </h4>
-                <ul v-for="(fav,key) in kol.favorites" :key="fav" class="w-list-none w-p-0 w-m-0 w-text-base">
+                <ul v-for="fav in kol.favorites" :key="fav" class="w-list-none w-p-0 w-m-0 w-text-base">
                 <li><a :href="`#fm_pr${fav.slug}`">{{fav.name}}</a></li>
                 </ul>
             </div>
