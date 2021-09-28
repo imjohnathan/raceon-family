@@ -327,47 +327,31 @@
 
     <section>
       <Title title="內容物說明" />
-      <div class="w-bg-[#0096df]">
-        <div class="w-container w-mx-auto w-flex w-text-white">
-          <div class="w-w-3/5 w-flex w-flex-col w-justify-center w-p-20">
-            <div class="">
-              <!--文字內容-->
-              <h2 class="w-mb-8">水動能電解質液 (提升保水力)</h2>
-              <h4>足夠電解質，身體保留水分的關鍵</h4>
-              <p class="w-text-lg">
-                汗流越多，選擇對的飲料越重要！『鈉』作為體內最主要電解質，能幫助吸收與保留水分，進而調節體溫。
-              </p>
-              <p class="w-text-lg">
-                據《美國運動醫學會》建議，耐力運動每小時應補充300-600mg鈉，水動能電解質液每小包含有422mg鈉，相當於1.5瓶運動飲料。
-              </p>
-            </div>
-          </div>
-          <div class="w-w-2/5">
-            <!--圖片-->
-            <img
-              class="w-full h-full w-object-cover"
-              src="./assets/fm_sec4_lcs_1.jpg"
-            />
-          </div>
-        </div>
-      </div>
+    <SamllProductsSection />
     </section>
-  </main>
 
-<img :src="FmSec3Pr1" />
+    <section>
+      <Title title="好評推薦" />
+    <Testimonies />
+    </section>
+
+  </main>
 
 </template>
 <script setup>
 import ProductSection from "./components/ProductSection.vue";
 import Title from "./components/Title.vue";
+import SamllProductsSection from "./components/SamllProductsSection.vue";
+import Testimonies from "./components/Testimonies.vue";
 </script>
-
 
 <script>
 export default {
   component: {
     Title,
-    ProductSection
+    ProductSection,
+    SamllProductsSection,
+    Testimonies
   },
   data: function () {
     return {
@@ -390,7 +374,6 @@ export default {
               link: "#vc",
             },
           ],
-          //pr_image : FmSec3Pr1,
         },
         {
           bg: false,
@@ -406,7 +389,6 @@ export default {
               link: "#lcs",
             },
           ],
-          //pr_image : FmSec3Pr2,
         },
         {
           bg: true,
@@ -422,10 +404,16 @@ export default {
               link: "#dc",
             },
           ],
-          //pr_image : FmSec3Pr3,
         },
       ],
     };
+  },
+  methods: {
+    getSrc(name) {
+       const path = `./assets/${name}.png`;
+       const modules = import.meta.globEager("./assets/*.png");
+       return modules[path].default;
+   }
   },
 };
 </script>
