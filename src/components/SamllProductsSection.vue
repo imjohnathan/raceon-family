@@ -9,12 +9,11 @@
                 :slides-per-view="1"
                 :space-between="50"
                 :pagination="pagination"
-                autoHeight="1"
                 class="w-container w-mx-auto w-flex"
                 :id="product.slug"
             >
                 <template v-for="(slide, key) in product.slides" :key="slide">
-                <swiper-slide>
+                <swiper-slide class="!w-h-auto">
                     <div 
                     :class="[product.slug == 'vc' ? 'w-text-black' : 'w-text-white']"
                     class="w-flex">
