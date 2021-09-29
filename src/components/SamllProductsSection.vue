@@ -47,10 +47,12 @@
                     </div>
                     <div class="w-w-2/5">
                         <!--圖片-->
+                        <div class="w-aspect-w-1 w-aspect-h-1.3">
                         <img
-                        class="w-full h-full w-object-cover"
+                        class="w-object-cover"
                         :src="getSrc(slide.image)"
                         />
+                        </div>
                     </div>
                     </div>
                 </swiper-slide>

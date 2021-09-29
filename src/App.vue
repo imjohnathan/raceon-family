@@ -340,6 +340,21 @@
     <Suitable />
     </section>
 
+    <section>
+      <Title title="使用時機" />
+    <Timing />
+    </section>
+
+    <section>
+      <Title title="購買通路" />
+    <SalesVendor />
+    </section>
+
+    <section>
+      <Title title="發票登錄抽獎活動" />
+      <Invoice />
+    </section>
+
   </main>
 
 </template>
@@ -349,6 +364,9 @@ import Title from "./components/Title.vue";
 import SamllProductsSection from "./components/SamllProductsSection.vue";
 import Testimonies from "./components/Testimonies.vue";
 import Suitable from "./components/Suitable.vue";
+import Timing from "./components/Timing.vue";
+import SalesVendor from "./components/SalesVendor.vue";
+import Invoice from "./components/Invoice.vue";
 </script>
 
 <script>
@@ -358,7 +376,10 @@ export default {
     ProductSection,
     SamllProductsSection,
     Testimonies,
-    Suitable
+    Suitable,
+    Timing,
+    SalesVendor,
+    Invoice
   },
   data: function () {
     return {

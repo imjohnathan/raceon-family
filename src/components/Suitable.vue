@@ -24,7 +24,7 @@
                 <!--建議搭配-->
                 <h3 class="w-text-center w-bg-black w-text-white w-py-1 w-rounded-4xl w-font-normal w-text-lg">建議搭配</h3>
                 <div class="w-flex w-justify-center w-p-4">
-                    <div v-for="(product,key) in act.products" :key="product" 
+                    <div v-for="product in act.products" :key="product" 
                     class="w-max-w-[72px]">
                         <a :href="`#fm_pr${product}`">
                         <img :src="getSrc(`fm_sec4_pr${product}.png`)" />

@@ -8,12 +8,12 @@ export default defineConfig({
   plugins: [
     vue(),
     WindiCSS(),
-    compress({
-      verbose: true,
-      pngquant:{
-        quality: [0.3, 0.5]
-      }
-    }),
+    // compress({
+    //   verbose: true,
+    //   pngquant:{
+    //     quality: [0.3, 0.5]
+    //   }
+    // }),
   ],
   build: {
     rollupOptions: {

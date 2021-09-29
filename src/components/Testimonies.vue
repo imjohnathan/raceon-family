@@ -57,9 +57,11 @@
             <!--包裝圖片-->
             <div class="w-pl-4 w-flex">
               <template v-for="fav in kol.favorites" :key="fav">
+                <div class="w-max-w-[72px]">
                 <a :href="`#fm_pr${fav.slug}`">
                   <img class="w-block w-w-24" :src="getSrc(fav.img)" />
                 </a>
+                </div>
               </template>
             </div>
           </div>
