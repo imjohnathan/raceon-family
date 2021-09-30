@@ -1,1336 +1,360 @@
 {
-	"home": {
-		"data": {
-			"shop_info": {
-				"shop_name": "我的店",
-				"branch_name": "江二路店",
-				"avatar": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528870206903&di=61bc76b8397a6f2d0286c620ea3d375a&imgtype=0&src=http%3A%2F%2Fs10.sinaimg.cn%2Fmiddle%2F85dbe4bftae0162a00d89%26690",
-				"contact": "13456789900",
-				"id": "1",
-				"notice": "1212412",
-				"shop_qrcode": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-				"qr_code": "http://mamaqunaer.oss-cn-shanghai.aliyuncs.com/android/201711/607bde41c4c2e540d7f57b47f65c3748.JPEG",
-				"province": "110000",
-				"city": "110100",
-				"district": "110101",
-				"area_name": "滴滴滴",
-				"address": "路100号",
-				"lng": "38.911251220094",
-				"lat": "121.60083184468",
-				"is_partner": 0,
-				"city_name": "懂得"
-			},
-			"activity_seckill": {
-				"setting": {
-					"title": "秒杀",
-					"banner": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3119832186,3639141636&fm=27&gp=0.jpg",
-					"module_id": "shop_seckill",
-					"style": 1,
-					"sort": 1,
-					"is_show": 1,
-					"is_banner_show": 1
-				},
-				"items": [
-					{
-						"id": 3589,
-						"name": "惠尔顿 汽车儿童安全座椅 车载婴儿宝宝安全座椅 0-6岁 皇家盔宝",
-						"sell_point": "",
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sales_price": 50,
-						"market_price": 40,
-						"total": 10,
-						"sold_num": 1,
-						"is_buy": 0,
-						"is_collect": 0,
-						"is_stars": 0,
-						"is_free_shipping": 0,
-						"is_haitao": 0,
-						"as_status": 1
-          },
-					{
-						"id": 3631,
-						"name": "自助上架-双规格",
-						"sell_point": "",
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sales_price": 1000,
-						"market_price": 888,
-						"total": 24,
-						"sold_num": 23,
-						"is_buy": 0,
-						"is_collect": 0,
-						"is_stars": 0,
-						"is_free_shipping": 0,
-						"is_haitao": 0,
-						"as_status": 0
-          }
-        ]
-			},
-			"shop_recommend": {
-				"setting": {
-					"title": "店主推荐",
-					"banner": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528870255838&di=90df5f0eb8269f16a54b415501a6ce5e&imgtype=0&src=http%3A%2F%2Ff2.dn.anqu.com%2Fthumb%2FNjExfHx8MTAwMDB8fHwzfHx8OWY0Zg%3D%3D%2Fallimg%2F1307%2F54-130F5091F0.jpg",
-					"module_id": "shop_recommend",
-					"style": 1,
-					"sort": 0,
-					"is_show": 1,
-					"is_banner_show": 1
-				},
-				"items": [
-					{
-						"id": 1848,
-						"shop_id": 1,
-						"name": "保税区！哈罗闪baby wash&care 婴儿滋润沐浴露200ml",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 3200,
-						"sales_price": 2900,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 85,
-						"is_virtual": 0,
-						"fx_item_id": 1106,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 1,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 1846,
-						"shop_id": 1,
-						"name": "美国艾维诺Aveeno婴儿无泪2合1洗发沐浴露354ml",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 12600,
-						"sales_price": 9500,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 231,
-						"is_virtual": 0,
-						"fx_item_id": 1102,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 1,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 1835,
-						"shop_id": 1,
-						"name": "【行货】大王维E环贴纸尿裤S84片",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 50000,
-						"sales_price": 47800,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 583,
-						"is_virtual": 0,
-						"fx_item_id": 1394,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 1,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          }
-        ]
-			},
-			"goods": {
-				"setting": {
-					"title": "全部商品",
-					"banner": "",
-					"module_id": "goods",
-					"style": 0,
-					"sort": 1,
-					"is_show": 1,
-					"is_banner_show": 0
-				},
-				"items": [
-					{
-						"id": 3631,
-						"shop_id": 1,
-						"name": "ujbfgh",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "vughij",
-						"market_price": 474,
-						"sales_price": 1,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 1,
-						"quantity": 534,
-						"is_virtual": 0,
-						"fx_item_id": 0,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 3630,
-						"shop_id": 1,
-						"name": "惠尔顿 9个月-6岁宝宝安全座椅 汽车用车载婴儿童安全座椅 运动宝",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 109900,
-						"sales_price": 78500,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 300,
-						"is_virtual": 0,
-						"fx_item_id": 1041,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 3568,
-						"shop_id": 1,
-						"name": "【行货】大王 GOO.N 纸尿裤S58片",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 76000,
-						"sales_price": 62400,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 89,
-						"is_virtual": 0,
-						"fx_item_id": 1388,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 3567,
-						"shop_id": 1,
-						"name": "惠尔顿 婴儿安全座椅9个月-12岁车用宝宝车载儿童安全座椅 全能宝",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 129900,
-						"sales_price": 92800,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 400,
-						"is_virtual": 0,
-						"fx_item_id": 1040,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 3566,
-						"shop_id": 1,
-						"name": "解放军",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "基督教",
-						"market_price": 1,
-						"sales_price": 1,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpgg",
-						"sold_quantity": 5,
-						"quantity": 85,
-						"is_virtual": 0,
-						"fx_item_id": 0,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 3564,
-						"shop_id": 1,
-						"name": "惠尔顿 儿童安全座椅 isofix汽车宝宝安全座椅3岁-12岁 茧之旅FIT",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 102900,
-						"sales_price": 69300,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 400,
-						"is_virtual": 0,
-						"fx_item_id": 1038,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 3563,
-						"shop_id": 1,
-						"name": "2罐装保税区直发！澳洲爱他美Aptamil婴儿配方奶粉2段6~12M900g",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 59000,
-						"sales_price": 56200,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 2039,
-						"is_virtual": 0,
-						"fx_item_id": 1024,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          },
-					{
-						"id": 3562,
-						"shop_id": 1,
-						"name": "2罐装保税区直发！澳洲爱他美Aptamil婴儿配方奶粉4段24M 900g",
-						"sell_point": "",
-						"brand_id": 0,
-						"brand_name": "",
-						"market_price": 56800,
-						"sales_price": 34800,
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"sold_quantity": 0,
-						"quantity": 2148,
-						"is_virtual": 0,
-						"fx_item_id": 1026,
-						"status": 1,
-						"approve_status": 1,
-						"sort_order": 100,
-						"is_haitao": 0,
-						"is_recommend": 0,
-						"use_start_time": 0,
-						"use_end_time": 0,
-						"is_stars": 0,
-						"is_buy": null,
-						"is_collect": null
-          }
-        ]
-			},
-			"page": {
-				"totalCount": 93,
-				"pageCount": 12,
-				"currentPage": 1,
-				"perPage": 8
-			},
-			"mx_goods": null
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"moreGoods": {
-		"data": {
-			"items": [
-				{
-					"id": 3631,
-					"shop_id": 1,
-					"name": "ujbfgh",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "vughij",
-					"market_price": 474,
-					"sales_price": 1,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 1,
-					"quantity": 534,
-					"is_virtual": 0,
-					"fx_item_id": 0,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
+    "products": [
+        {
+            "bg": true,
+            "id": 1,
+            "tags": "保水力,修護力",
+            "title": "爆汗１小時神補給包",
+            "subtitle": "抗氧修護力，保水度最高提升至127%",
+            "price": 99,
+            "promoprice": 79,
+            "insides": [
+                {
+                    "name": "水動能電解質液 × 1",
+                    "link": "#lcs"
+                },
+                {
+                    "name": "環原力維生素C × 1",
+                    "link": "#vc"
+                }
+            ]
         },
-				{
-					"id": 3630,
-					"shop_id": 1,
-					"name": "惠尔顿 9个月-6岁宝宝安全座椅 汽车用车载婴儿童安全座椅 运动宝",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "",
-					"market_price": 109900,
-					"sales_price": 78500,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 0,
-					"quantity": 300,
-					"is_virtual": 0,
-					"fx_item_id": 1041,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
+        {
+            "bg": false,
+            "id": 2,
+            "tags": "保水力",
+            "title": "流汗６小時神補水包",
+            "subtitle": "低滲透壓快吸收，讓身體真正喝進水",
+            "price": 139,
+            "promoprice": 111,
+            "insides": [
+                {
+                    "name": "水動能電解質液 × 3",
+                    "link": "#lcs"
+                }
+            ]
         },
-				{
-					"id": 3568,
-					"shop_id": 1,
-					"name": "【行货】大王 GOO.N 纸尿裤S58片",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "",
-					"market_price": 76000,
-					"sales_price": 62400,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 0,
-					"quantity": 89,
-					"is_virtual": 0,
-					"fx_item_id": 1388,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
-        },
-				{
-					"id": 3567,
-					"shop_id": 1,
-					"name": "惠尔顿 婴儿安全座椅9个月-12岁车用宝宝车载儿童安全座椅 全能宝",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "",
-					"market_price": 129900,
-					"sales_price": 92800,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 0,
-					"quantity": 400,
-					"is_virtual": 0,
-					"fx_item_id": 1040,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
-        },
-				{
-					"id": 3566,
-					"shop_id": 1,
-					"name": "解放军",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "基督教",
-					"market_price": 1,
-					"sales_price": 1,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpgg",
-					"sold_quantity": 5,
-					"quantity": 85,
-					"is_virtual": 0,
-					"fx_item_id": 0,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
-        },
-				{
-					"id": 3564,
-					"shop_id": 1,
-					"name": "惠尔顿 儿童安全座椅 isofix汽车宝宝安全座椅3岁-12岁 茧之旅FIT",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "",
-					"market_price": 102900,
-					"sales_price": 69300,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 0,
-					"quantity": 400,
-					"is_virtual": 0,
-					"fx_item_id": 1038,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
-        },
-				{
-					"id": 3563,
-					"shop_id": 1,
-					"name": "2罐装保税区直发！澳洲爱他美Aptamil婴儿配方奶粉2段6~12M900g",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "",
-					"market_price": 59000,
-					"sales_price": 56200,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 0,
-					"quantity": 2039,
-					"is_virtual": 0,
-					"fx_item_id": 1024,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
-        },
-				{
-					"id": 3562,
-					"shop_id": 1,
-					"name": "2罐装保税区直发！澳洲爱他美Aptamil婴儿配方奶粉4段24M 900g",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "",
-					"market_price": 56800,
-					"sales_price": 34800,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 0,
-					"quantity": 2148,
-					"is_virtual": 0,
-					"fx_item_id": 1026,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
+        {
+            "bg": true,
+            "id": 3,
+            "tags": "專注力",
+            "title": "耐力８小時神充電包",
+            "subtitle": "快速啟動專注力，強力支援8小時",
+            "price": 169,
+            "promoprice": 135,
+            "insides": [
+                {
+                    "name": "雙速咖啡因雙層錠 × 2",
+                    "link": "#dc"
+                }
+            ]
         }
-      ],
-			"page": {
-				"totalCount": 38,
-				"pageCount": 5,
-				"currentPage": 1,
-				"perPage": 8
-			}
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"category": {
-		"data": [
-			{
-				"id": 697,
-				"shop_id": 1,
-				"parent_id": 0,
-				"name": "小小分",
-				"pic_url": "",
-				"is_parent": 1,
-				"sort_order": 100,
-				"status": 1,
-				"created_at": 1515045329,
-				"updated_at": 1515045329,
-				"children": [
-					{
-						"id": 699,
-						"shop_id": 1,
-						"parent_id": 697,
-						"name": "猫咪",
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"is_parent": 0,
-						"sort_order": 100,
-						"status": 1,
-						"created_at": 1515045344,
-						"updated_at": 1515045344
-		  },
-		  {
-						"id": 899,
-						"shop_id": 1,
-						"parent_id": 697,
-						"name": "猫咪2",
-						"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-						"is_parent": 0,
-						"sort_order": 100,
-						"status": 1,
-						"created_at": 1515045344,
-						"updated_at": 1515045344
-          }
-        ]
-      },
-			{
-				"id": 0,
-				"shop_id": 1,
-				"parent_id": 0,
-				"name": "其它",
-				"pic_url": "",
-				"is_parent": 1,
-				"sort_order": 100,
-				"status": 1
-      }
     ],
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"goods": {
-		"data": {
-			"items": [
-				{
-					"id": 3568,
-					"shop_id": 1,
-					"name": "【行货】大王 GOO.N 纸尿裤S58片",
-					"sell_point": "",
-					"brand_id": 0,
-					"brand_name": "",
-					"market_price": 76000,
-					"sales_price": 62400,
-					"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-					"sold_quantity": 0,
-					"quantity": 89,
-					"is_virtual": 0,
-					"fx_item_id": 1388,
-					"status": 1,
-					"approve_status": 1,
-					"sort_order": 100,
-					"is_haitao": 0,
-					"is_recommend": 0,
-					"use_start_time": 0,
-					"use_end_time": 0,
-					"is_stars": 0,
-					"is_buy": null,
-					"is_collect": null
+    "smproducts": [
+        {
+            "slug": "lcs",
+            "url": "/products/ors-sport-hydro",
+            "title": "水動能電解質液 (提升保水力)",
+            "slides": [
+                {
+                    "title": "足夠電解質，身體保留水分的關鍵",
+                    "image": "fm_sec5_lcs_1.jpg",
+                    "paragragh": [
+                        "汗流越多，選擇對的飲料越重要！『鈉』作為體內最主要電解質，能幫助吸收與保留水分，進而調節體溫。",
+                        "據《美國運動醫學會》建議，耐力運動每小時應補充300-600mg鈉，水動能電解質液每小包含有422mg鈉，相當於1.5瓶運動飲料。"
+                    ]
+                },
+                {
+                    "title": "WHO醫學級配方，啟動體內輸水幫補",
+                    "image": "fm_sec5_lcs_2.jpg",
+                    "paragragh": [
+                        "WHO醫學級配方含有特定的鈉與葡萄糖比例，會打開身體吸收水分的快速管道；加上足夠的電解質，讓喝進去的水有效保留體內，而不是喝到膀胱被排掉。",
+                        "可以想成在身體內建一個蓄水池，當水份留得住，更能有助調節體溫、幫助散熱。"
+                    ]
+                },
+                {
+                    "title": "科學實證，保水率最高增至127%",
+                    "image": "fm_sec5_lcs_3.jpg",
+                    "paragragh": [
+                        "喝水不光只是喝多少，被身體保留更重要。水動能電解質液經臨床實驗，結果顯示運動前飲用，能顯著提升身體保水率最高至127%。",
+                        "若用運動每小時普遍流失1L的汗水來算，代表能幫助身體省下270ml的水，大約是一般寶特瓶的半瓶水量！"
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "vc",
+            "url": "/products/reforce-vitamin-c",
+            "title": "環原力維生素C (修護力)",
+            "slides": [
+                {
+                    "title": "抗氧化修護力，給勞累後的身體大掃除",
+                    "image": "fm_sec5_vc_1.jpg",
+                    "paragragh": [
+                        "促進膠原蛋白形成、鐵質吸收與傷口癒合，維生素C對身體的好不只養顏美容，強大的抗氧化作用，更能降低劇烈運動、工作勞動或情緒壓力等對身體產生的壓力。",
+                        "可以把它想成每天幫身體進行掃除，清除過多、造成負擔的廢棄物。"
+                    ]
+                },
+                {
+                    "title": "通過耐高溫測試，熱熱喝也ＯＫ",
+                    "image": "fm_sec5_vc_2.jpg",
+                    "paragragh": [
+                        "一般維生素C不耐熱、易受氧化破壞的問題，環原力也透過醫藥級技術成功克服，在80度高溫下仍能保持93-96%的維生素C含量，溫熱的喝同樣有效。"
+                    ]
+                },
+                {
+                    "title": "一包等於600顆櫻桃，低卡無負擔",
+                    "image": "fm_sec5_vc_3.jpg",
+                    "paragragh": [
+                        "環原力每包含有600mg維生素C，約為600顆櫻桃，熱量卻僅27.6大卡！絕佳的酸甜莓果風味，補足每日C同時，更有助提升日常的水分補充。",
+                        "在工作外食、戶外活動不易攝取蔬果的情況下，環原力輕量好帶，快速把水變好喝。"
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "dc",
+            "url": "/products/double-caffeine",
+            "title": "雙速咖啡因雙層錠 (專注力）",
+            "slides": [
+                {
+                    "title": "快速提高專注力，一錠還你清晰思緒",
+                    "image": "fm_sec5_dc_1.jpg",
+                    "paragragh": [
+                        "台灣首創『兩段速咖啡因釋放』技術，只要1小錠，就能快速啟動＆穩定支援8小時專注力，中間不必再做補充。",
+                        "可以想成冰滴咖啡，在體內定速釋放微量咖啡因，達到整天專注，又不超過負荷。"
+                    ]
+                },
+                {
+                    "title": "不用喝下大量水分，提高專注力不中斷",
+                    "image": "fm_sec5_dc_2.jpg",
+                    "paragragh": [
+                        "<strong>一般咖啡或能量飲普遍有個問題</strong>，就是來得快也去得快，因此往往半天後需要再來一杯，但這在運動、開車過程或工作忙碌時，不是那麼方便！",
+                        "雙速咖啡因每1錠約為2小杯咖啡，定速微量釋放相對降低刺激，也不會攝取過多水分與熱量。"
+                    ]
+                },
+                {
+                    "title": "天然綠茶萃取，溫和穩定不刺激",
+                    "image": "fm_sec5_dc_3.jpg",
+                    "paragragh": [
+                        "不喝咖啡的人也不用擔心，雙速的咖啡因取自天然綠茶，符合歐盟食品規範、且採用無毒的純淨水萃取方式。",
+                        "對於常喝茶飲的台灣人來說，身體的接受度自然好，溫和不刺激。"
+                    ]
+                }
+            ]
         }
-      ],
-			"page": {
-				"totalCount": 1,
-				"pageCount": 1,
-				"currentPage": 1,
-				"perPage": 8
-			}
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"details": {
-		"data": {
-			"id": 3568,
-			"user_id": 758,
-			"shop_id": 1,
-			"product_id": 0,
-			"name": "【行货】大王 GOO.N 纸尿裤S58片",
-			"sell_point": "",
-			"shop_cids": "699",
-			"cid": 59,
-			"cat_name": "",
-			"brand_id": 0,
-			"brand_name": "",
-			"key_props": "1001:1007;3413:2711;",
-			"key_props_str": "品牌:GOON大王天使;纸尿裤尺码:S58;",
-			"props": "1001:1007;3413:2711;",
-			"props_str": "品牌:GOON大王天使;纸尿裤尺码:S58;",
-			"input_pids": "",
-			"input_str": "",
-			"market_price": 76000,
-			"sales_price": 62400,
-			"purchase_price": 48000,
-			"weight": "0.000",
-			"bulk": "0.000",
-			"pic_url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg",
-			"withhold_quantity": 0,
-			"sold_quantity": 0,
-			"quantity": 89,
-			"sub_stock": 1,
-			"tax_rate": "0.000",
-			"is_virtual": 0,
-			"is_free_shipping": 0,
-			"is_fenxiao": 1,
-			"fx_item_id": 1388,
-			"fx_profit": 14400,
-			"min_profit": 14400,
-			"max_profit": 14400,
-			"postage_id": 1,
-			"province": "",
-			"city": "",
-			"has_sku": 0,
-			"outer_id": "",
-			"barcode": "",
-			"status": 1,
-			"approve_status": 1,
-			"sort_order": 100,
-			"mop_product_id": 63,
-			"features": "",
-			"version": 0,
-			"start_sale_time": 0,
-			"created_at": 1510045090,
-			"updated_at": 1510045090,
-			"is_haitao": 0,
-			"is_recommend": 0,
-			"recommend_time": 0,
-			"is_zhuan": 0,
-			"miao_id": 0,
-			"use_start_time": 0,
-			"use_end_time": 0,
-			"video_id": 0,
-			"is_stars": 0,
-			"max_price": 0,
-			"one_grate": 0,
-			"two_grate": 0,
-			"is_buy": null,
-			"is_collect": 0,
-			"ship_address": {
-				"city": "杭州市",
-				"city_code": "330100"
-			},
-			"attention_matters": null,
-			"postage_name": null,
-			"desc": "<img alt=\"\" src=\"http://pic2.moresing.com/kindeditor/php/../attached/image/20170220/20170220135343_63212.jpg\"><img alt=\"\" src=\"http://pic1.moresing.com/kindeditor/php/../attached/image/20170220/20170220135343_37527.jpg\"><img alt=\"\" src=\"http://pic1.moresing.com/kindeditor/php/../attached/image/20170220/20170220135343_83387.jpg\"><img alt=\"\" src=\"http://pic2.moresing.com/kindeditor/php/../attached/image/20170220/20170220135344_95490.jpg\"><img alt=\"\" src=\"http://pic2.moresing.com/kindeditor/php/../attached/image/20170220/20170220135344_78328.jpg\"><img alt=\"\" src=\"http://pic1.moresing.com/kindeditor/php/../attached/image/20170220/20170220135344_74260.jpg\"><img alt=\"\" src=\"http://pic2.moresing.com/kindeditor/php/../attached/image/20170220/20170220135344_65105.jpg\"><img alt=\"\" src=\"http://pic2.moresing.com/kindeditor/php/../attached/image/20170220/20170220135344_16353.jpg\"><img alt=\"\" src=\"http://pic1.moresing.com/kindeditor/php/../attached/image/20170220/20170220135344_65133.jpg\">",
-			"skus": [],
-			"prop_imgs": [],
-			"item_imgs": [
-				{
-					"url": "//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg"
-        }
-      ],
-			"video_url": ""
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"address": {
-		"data": [
-			{
-				"id": "119",
-				"user_id": "448907",
-				"consignee": "2222",
-				"id_card": "",
-				"province": "130000",
-				"city": "130400",
-				"district": "130406",
-				"town": "",
-				"area_name": "河北省 邯郸市 峰峰矿区",
-				"address": "dsdsadsad",
-				"zip_code": "12323",
-				"mobile": "13454193338",
-				"telphone": "",
-				"created_at": "1506315000",
-				"updated_at": "1506315000"
-      },
-			{
-				"id": "127",
-				"user_id": "448907",
-				"consignee": "薛大大下单",
-				"id_card": "",
-				"province": "110000",
-				"city": "110100",
-				"district": "110101",
-				"town": "",
-				"area_name": "北京市 北京市 东城区",
-				"address": "警察局就拒绝感觉",
-				"zip_code": "000000",
-				"mobile": "18758871254",
-				"telphone": "",
-				"created_at": "1506395556",
-				"updated_at": "1506395556"
-      },
-			{
-				"id": "123",
-				"user_id": "448907",
-				"consignee": "测试",
-				"id_card": "",
-				"province": "130000",
-				"city": "130100",
-				"district": "130102",
-				"town": "",
-				"area_name": "河北省 石家庄市 长安区",
-				"address": "水电费缴纳可劲儿放暑假",
-				"zip_code": "1111",
-				"mobile": "13323456789",
-				"telphone": "",
-				"created_at": "1506320538",
-				"updated_at": "1506320538"
-      },
-			{
-				"id": "121",
-				"user_id": "448907",
-				"consignee": "sdsds",
-				"id_card": "",
-				"province": "140000",
-				"city": "140200",
-				"district": "140211",
-				"town": "",
-				"area_name": "山西省 大同市 南郊区",
-				"address": "22222",
-				"zip_code": "1233",
-				"mobile": "13454193338",
-				"telphone": "",
-				"created_at": "1506315889",
-				"updated_at": "1506315889"
-      },
-			{
-				"id": "93",
-				"user_id": "448907",
-				"consignee": "大屏",
-				"id_card": "",
-				"province": "330000",
-				"city": "330100",
-				"district": "330106",
-				"town": "",
-				"area_name": "浙江省 杭州市 西湖区",
-				"address": "测试收啊啊啊啊啊啊",
-				"zip_code": "",
-				"mobile": "13312341234",
-				"telphone": "",
-				"created_at": "1505875313",
-				"updated_at": "1505875313"
-      },
-			{
-				"id": "91",
-				"user_id": "448907",
-				"consignee": "萨达是",
-				"id_card": "",
-				"province": "120000",
-				"city": "120100",
-				"district": "120102",
-				"town": "",
-				"area_name": "天津 天津市 河东区",
-				"address": "实打实的撒的",
-				"zip_code": "123456",
-				"mobile": "13454193338",
-				"telphone": "",
-				"created_at": "1505820391",
-				"updated_at": "1505820391"
-      }
     ],
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"address-default": {
-		"data": {
-			"id": "119",
-			"user_id": "448907",
-			"consignee": "2222",
-			"id_card": "",
-			"province": "130000",
-			"city": "130400",
-			"district": "130406",
-			"town": "",
-			"area_name": "河北省 邯郸市 峰峰矿区",
-			"address": "dsdsadsad",
-			"zip_code": "12323",
-			"mobile": "13454193338",
-			"telphone": "",
-			"created_at": "1506315000",
-			"updated_at": "1506315000"
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"user-login": {
-		"data": {
-			"user_id": 448907,
-			"access_token": "hA-QA97BBuPFgDv9Eht8z2JFxDq-6cLQ",
-			"mobile": "13454193330",
-			"madian_token": "3Uu9q0RRx56IQlFTKBIYIzVjYTUyNWY5MDU4YzE2YjgyYTE1Y2ZhYmM3MWY2N2MwNzM1ZTJjOTFjNTYxODllZWQ4NWEwMGVkZTNkNzE3ZTfV\/eHskiAmLo1oMBrx1nmfN6RylF3VjMe+nrFt38WcmiGcyyZZK1tsq4OaNWiisbQpIuk5h9JhVOgO0aPffBwR\/VBNpwkTDPpzA6xECv4LAQ=="
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"user-profile": {
-		"data": {
-			"user_id": "448907",
-			"nick_name": "11",
-			"gender": "1",
-			"birthday": "1508198400",
-			"avatar": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528870575654&di=be72a93643dfff4162c32d70166ddfe4&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D67a7d1f0b551f819f1700b4eef8466db%2Ff9dcd100baa1cd112c3e25fbbc12c8fcc2ce2d64.jpg",
-			"province": "430000",
-			"city": "431200",
-			"district": "",
-			"area_name": "",
-			"default_address_id": "259",
-			"level": "1",
-			"background_image": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528870451130&di=053a495c9c4a83c5f669d49032666acb&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2Fd7cf587340b13c7b17a22d478fcd68a998fbbefa.png",
-			"exp": "50",
-			"login_time": "1516765163",
-			"login_ip": "2130706433",
-			"created_at": "1501763730",
-			"updated_at": "1516765163",
-			"mobile": "123456789"
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"shop-info": {
-		"data": {
-			"id": "1",
-			"user_id": "758",
-			"shop_id": "1",
-			"shop_name": "\u6b27\u4e09\u4e0d\u6c5f\u4e8c\u8def\u5e971",
-			"branch_name": "\u6c5f\u4e8c\u8def\u5e97",
-			"shop_qrcode": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201612\/L32tMbF1PUiy40A9.png",
-			"avatar": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/20171201\/ZcawdYtnn3.jpg",
-			"banner": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/6ebfc6b423caa4db6e3c8a91997210b7.JPEG",
-			"notice": "1212412",
-			"contact": "13370140905",
-			"wechat_id": "99999",
-			"qr_code": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/607bde41c4c2e540d7f57b47f65c3748.JPEG",
-			"hash_code": "85f3952d8af25eec1fc533d77b6bdb29",
-			"item_limit": "2",
-			"status": "1",
-			"created_at": "1481964080",
-			"updated_at": "1516673113",
-			"province": "110000",
-			"city": "110100",
-			"district": "110101",
-			"area_name": "\u5317\u4eac,\u5317\u4eac\u5e02,\u4e1c\u57ce\u533a",
-			"address": "\u897f\u5b89\u8def100\u53f7",
-			"lng": "38.911251220094",
-			"lat": "121.60083184468",
-			"is_partner": 0,
-			"shop_status": 10,
-			"city_name": "\u5317\u4eac\u5e02"
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"order-list": {
-		"data": {
-			"items": [{
-				"id": "MD2018012300001228",
-				"status": 20,
-				"post_fee": 0,
-				"total_fee": 5,
-				"is_can_reminder": true,
-				"orderItems": [{
-					"id": "MD2018012300001291",
-					"order_id": "MD2018012300001228",
-					"item_id": 1849,
-					"sku_id": "",
-					"price": 5,
-					"quantity": 1,
-					"item_name": "\u4fdd\u7a0e\u533a\uff01Merries\u82b1\u738b\u7eb8\u5c3f\u88e4NB90",
-					"pic_url": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201611\/JDzsAMR8736tpgfe.jpg",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 5,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 20,
-					"refund_id": 0,
-					"refund_status": 0
-				}]
-			}, {
-				"id": "MD2018012200001216",
-				"status": 30,
-				"post_fee": 0,
-				"total_fee": 1,
-				"is_can_reminder": false,
-				"orderItems": [{
-					"id": "MD2018012200001279",
-					"order_id": "MD2018012200001216",
-					"item_id": 3566,
-					"sku_id": "",
-					"price": 1,
-					"quantity": 1,
-					"item_name": "\u89e3\u653e\u519b",
-					"pic_url": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201711\/15100451141371822.jpg",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 1,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 30,
-					"refund_id": 191,
-					"refund_status": 10
-				}]
-			}, {
-				"id": "MD2018012200001207",
-				"status": 20,
-				"post_fee": 1,
-				"total_fee": 6,
-				"is_can_reminder": true,
-				"orderItems": [{
-					"id": "MD2018012200001269",
-					"order_id": "MD2018012200001207",
-					"item_id": 3631,
-					"sku_id": "",
-					"price": 5,
-					"quantity": 1,
-					"item_name": "ujbfgh",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/ff9e85124638b593212148aad47c893b.JPEG",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 5,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 20,
-					"refund_id": 175,
-					"refund_status": 10
-				}]
-			}, {
-				"id": "MD2018012200001205",
-				"status": 20,
-				"post_fee": 1,
-				"total_fee": 6,
-				"is_can_reminder": true,
-				"orderItems": [{
-					"id": "MD2018012200001267",
-					"order_id": "MD2018012200001205",
-					"item_id": 3631,
-					"sku_id": "",
-					"price": 5,
-					"quantity": 1,
-					"item_name": "ujbfgh",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/ff9e85124638b593212148aad47c893b.JPEG",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 5,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 20,
-					"refund_id": 173,
-					"refund_status": 10
-				}]
-			}, {
-				"id": "MD2018012200001204",
-				"status": 20,
-				"post_fee": 1,
-				"total_fee": 6,
-				"is_can_reminder": true,
-				"orderItems": [{
-					"id": "MD2018012200001266",
-					"order_id": "MD2018012200001204",
-					"item_id": 3631,
-					"sku_id": "",
-					"price": 5,
-					"quantity": 1,
-					"item_name": "ujbfgh",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/ff9e85124638b593212148aad47c893b.JPEG",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 5,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 20,
-					"refund_id": 171,
-					"refund_status": 10
-				}]
-			}, {
-				"id": "MD2018012200001203",
-				"status": 20,
-				"post_fee": 1,
-				"total_fee": 6,
-				"is_can_reminder": true,
-				"orderItems": [{
-					"id": "MD2018012200001265",
-					"order_id": "MD2018012200001203",
-					"item_id": 3631,
-					"sku_id": "",
-					"price": 5,
-					"quantity": 1,
-					"item_name": "ujbfgh",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/ff9e85124638b593212148aad47c893b.JPEG",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 5,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 20,
-					"refund_id": 169,
-					"refund_status": 10
-				}]
-			}, {
-				"id": "MD2018012200001202",
-				"status": 20,
-				"post_fee": 1,
-				"total_fee": 6,
-				"is_can_reminder": true,
-				"orderItems": [{
-					"id": "MD2018012200001264",
-					"order_id": "MD2018012200001202",
-					"item_id": 3631,
-					"sku_id": "",
-					"price": 5,
-					"quantity": 1,
-					"item_name": "ujbfgh",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/ff9e85124638b593212148aad47c893b.JPEG",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 5,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 20,
-					"refund_id": 167,
-					"refund_status": 10
-				}]
-			}, {
-				"id": "MD2018012200001201",
-				"status": 20,
-				"post_fee": 1,
-				"total_fee": 6,
-				"is_can_reminder": true,
-				"orderItems": [{
-					"id": "MD2018012200001263",
-					"order_id": "MD2018012200001201",
-					"item_id": 3631,
-					"sku_id": "",
-					"price": 5,
-					"quantity": 1,
-					"item_name": "ujbfgh",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/ff9e85124638b593212148aad47c893b.JPEG",
-					"sku_props_str": "",
-					"tax_fee": 0,
-					"discount_fee": 0,
-					"total_fee": 5,
-					"start_time": 0,
-					"end_time": 0,
-					"status": 20,
-					"refund_id": 165,
-					"refund_status": 10
-				}]
-			}],
-			"page": {
-				"totalCount": 65,
-				"pageCount": 9,
-				"currentPage": 1,
-				"perPage": 8
-			}
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"electronic-list": {
-		"data": {
-			"items": [{
-				"id": "MD2018022600001480",
-				"status": 10,
-				"total_fee": 1,
-				"serviceItems": [{
-					"id": "MD2018022600001589",
-					"order_id": "MD2018022600001480",
-					"item_id": 3689,
-					"sku_id": "",
-					"price": 1,
-					"quantity": 1,
-					"item_name": "\u9897\u7c92\u5242\u963f\u8428\u5fb7\u8def\u53e3\u9644\u8fd1\u963f\u5580\u7409\u65af\u4f4e\u4ef7\u623f",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/user\/1000597\/m5k6GmMZKT.jpg",
-					"sku_props_str": "",
-					"total_fee": 1,
-					"start_time": 1513069200,
-					"end_time": 1525845401,
-					"status": 10
-				}]
-			}],
-			"page": {
-				"totalCount": 1,
-				"pageCount": 1,
-				"currentPage": 1,
-				"perPage": 8
-			}
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	},
-	"refund-list": {
-		"data": {
-			"items": [{
-				"id": 205,
-				"order_id": "MD2018011600001107",
-				"apply_refund_fee": 12,
-				"status": 60,
-				"orderItem": {
-					"id": "MD2018011600001131",
-					"price": 7,
-					"quantity": 2,
-					"item_id": 1849,
-					"item_name": "\u4fdd\u7a0e\u533a\uff01Merries\u82b1\u738b\u7eb8\u5c3f\u88e4NB90",
-					"pic_url": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201611\/JDzsAMR8736tpgfe.jpg",
-					"sku_props_str": "",
-					"total_fee": 14,
-					"payment": 12
-				}
-			}, {
-				"id": 201,
-				"order_id": "MD2018011500001084",
-				"apply_refund_fee": 1,
-				"status": 60,
-				"orderItem": {
-					"id": "MD2018011500001108",
-					"price": 1,
-					"quantity": 1,
-					"item_id": 3631,
-					"item_name": "ujbfgh",
-					"pic_url": "http:\/\/mamaqunaer.oss-cn-shanghai.aliyuncs.com\/android\/201711\/ff9e85124638b593212148aad47c893b.JPEG",
-					"sku_props_str": "",
-					"total_fee": 1,
-					"payment": 1
-				}
-			}, {
-				"id": 191,
-				"order_id": "MD2018012200001216",
-				"apply_refund_fee": 1,
-				"status": 60,
-				"orderItem": {
-					"id": "MD2018012200001279",
-					"price": 1,
-					"quantity": 1,
-					"item_id": 3566,
-					"item_name": "\u89e3\u653e\u519b",
-					"pic_url": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201711\/15100451141371822.jpg",
-					"sku_props_str": "",
-					"total_fee": 1,
-					"payment": 1
-				}
-			}, {
-				"id": 101,
-				"order_id": "MD2018012200001216",
-				"apply_refund_fee": 1,
-				"status": 60,
-				"orderItem": {
-					"id": "MD2018012200001279",
-					"price": 1,
-					"quantity": 1,
-					"item_id": 3566,
-					"item_name": "\u89e3\u653e\u519b",
-					"pic_url": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201711\/15100451141371822.jpg",
-					"sku_props_str": "",
-					"total_fee": 1,
-					"payment": 1
-				}
-			}, {
-				"id": 105,
-				"order_id": "MD2018012200001216",
-				"apply_refund_fee": 1,
-				"status": 60,
-				"orderItem": {
-					"id": "MD2018012200001279",
-					"price": 1,
-					"quantity": 1,
-					"item_id": 3566,
-					"item_name": "\u89e3\u653e\u519b",
-					"pic_url": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201711\/15100451141371822.jpg",
-					"sku_props_str": "",
-					"total_fee": 1,
-					"payment": 1
-				}
-			}, {
-				"id": 112,
-				"order_id": "MD2018012200001216",
-				"apply_refund_fee": 1,
-				"status": 60,
-				"orderItem": {
-					"id": "MD2018012200001279",
-					"price": 1,
-					"quantity": 1,
-					"item_id": 3566,
-					"item_name": "\u89e3\u653e\u519b",
-					"pic_url": "http:\/\/moresing-v3.img-cn-shanghai.aliyuncs.com\/201711\/15100451141371822.jpg",
-					"sku_props_str": "",
-					"total_fee": 1,
-					"payment": 1
-				}
-			}],
-			"page": {
-				"totalCount": 10,
-				"pageCount": 2,
-				"currentPage": 1,
-				"perPage": 8
-			}
-		},
-		"code": 200,
-		"message": "OK",
-		"success": true
-	}
+    "kols": [
+        {
+            "avatar": "fm_sec5_vc_1.jpg",
+            "name": "吳睿恩",
+            "job": "跑者",
+            "content": "自從試用過鋭速的咖啡因錠後就從此愛上了！因為我的工作屬於服務業，工作時比較不能跑廁所，因此平常有喝咖啡習慣的我工作時比較不會喝太多咖啡",
+            "favorites": [
+                {
+                    "name": "爆汗１小時神補給包",
+                    "img": "fm_sec4_pr1.png",
+                    "slug": "1"
+                }
+            ]
+        },
+        {
+            "avatar": "fm_sec5_dc_1.jpg",
+            "name": "吳睿恩",
+            "job": "跑者",
+            "content": "自從試用過鋭速的咖啡因錠後就從此愛上了！因為我的工作屬於服務業，因為我的工作屬於服務業，因為我的工作屬於服務業，因為我的工作屬於服務業，因為我的工作屬於服務業，工作時比較不能跑廁所，因此平常有喝咖啡習慣的我工作時比較不會喝太多咖啡",
+            "favorites": [
+                {
+                    "name": "爆汗１小時神補給包",
+                    "img": "fm_sec4_pr1.png",
+                    "slug": "1"
+                }
+            ]
+        },
+        {
+            "avatar": "fm_sec5_lcs_1.jpg",
+            "name": "吳睿恩",
+            "job": "跑者",
+            "content": "自從試用過鋭速的咖啡因錠後就從此愛上了！因為我的工作屬於服務業，工作時比較不能跑廁所，因此平常有喝咖啡習慣的我工作時比較不會喝太多咖啡",
+            "favorites": [
+                {
+                    "name": "爆汗１小時神補給包",
+                    "img": "fm_sec4_pr1.png",
+                    "slug": "1"
+                }
+            ]
+        },
+        {
+            "avatar": "fm_sec5_vc_2.jpg",
+            "name": "吳睿恩",
+            "job": "跑者",
+            "content": "自從試用過鋭速的咖啡因錠後就從此愛上了！因為我的工作屬於服務業，工作時比較不能跑廁所，因此平常有喝咖啡習慣的我工作時比較不會喝太多咖啡",
+            "favorites": [
+                {
+                    "name": "耐力８小時神充電包",
+                    "img": "fm_sec4_pr3.png",
+                    "slug": "3"
+                }
+            ]
+        },
+        {
+            "avatar": "fm_sec5_dc_2.jpg",
+            "name": "吳睿恩",
+            "job": "跑者",
+            "content": "自從試用過鋭速的咖啡因錠後就從此愛上了！因為我的工作屬於服務業，工作時比較不能跑廁所，因此平常有喝咖啡習慣的我工作時比較不會喝太多咖啡",
+            "favorites": [
+                {
+                    "name": "爆汗１小時神補給包",
+                    "img": "fm_sec4_pr1.png",
+                    "slug": "1"
+                },
+                {
+                    "name": "流汗６小時神補水包",
+                    "img": "fm_sec4_pr2.png",
+                    "slug": "2"
+                }
+            ]
+        },
+        {
+            "avatar": "fm_sec5_vc_3.jpg",
+            "name": "吳睿恩",
+            "job": "跑者",
+            "content": "自從試用過鋭速的咖啡因錠後就從此愛上了！因為我的工作屬於服務業，工作時比較不能跑廁所，因此平常有喝咖啡習慣的我工作時比較不會喝太多咖啡",
+            "favorites": [
+                {
+                    "name": "爆汗１小時神補給包",
+                    "img": "fm_sec4_pr1.png",
+                    "slug": "1"
+                }
+            ]
+        }
+    ],
+    "activities": [
+        {
+            "name": "戶外運動",
+            "icon": "<svg id=\"a2230f04-5114-495c-ae71-f7e1b829b869\" data-name=\"圖層 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 150 130\"><defs><clipPath id=\"a777513c-2e2a-48e2-8c39-8f222251d1cb\"><rect width=\"150\" height=\"130\" style=\"fill:none\"/></clipPath></defs><g style=\"clip-path:url(#a777513c-2e2a-48e2-8c39-8f222251d1cb)\"><path d=\"M102.55,63.7c-1.17-.15-1.61.35-1.63,1.47,0,1.44-.18,2.87-.25,4.3q-1,19.92-2.09,39.85c-.14,2.83-.28,5.65-.38,8.48-.06,1.43.63,2.3,1.77,2.25a1.82,1.82,0,0,0,1.89-2c0-.94.14-1.88.19-2.82q1.19-22.38,2.35-44.76c.12-2.21.2-4.42.3-6.72A16.94,16.94,0,0,1,102.55,63.7Z\"/><path d=\"M77.41,53.36c-.53,3.54-1,6.72-1.46,9.89-.29,2.06-.53,4.12-.83,6.18a4.67,4.67,0,0,0,1.79,4.47c2.6,2.23,5.15,4.53,7.79,6.7a11.39,11.39,0,0,1,4.38,8.58C89.56,97.11,90.3,105,90.79,113A6.57,6.57,0,1,1,77.69,114c-.54-7-1.08-14.06-1.53-21.09A5,5,0,0,0,74.25,89c-4.12-3.35-8.06-6.92-12.13-10.34s-5.38-7.86-4.44-13.19c1-5.81,1.6-11.69,2.39-17.54.39-2.91.73-5.82,1.23-8.7,1-5.64,5.58-8.45,13.23-7.43,3.67,4.82,7.72,9.41,11.16,14.4a6.75,6.75,0,0,0,6.6,3.33c3.61-.19,7.25.13,10.87.25a5.48,5.48,0,1,1-.16,11c-2.82,0-5.65-.27-8.47-.35s-5.75-.13-8.63-.16a6.15,6.15,0,0,1-5.11-2.58C79.77,56.34,78.71,55,77.41,53.36Z\"/><path d=\"M54.22,33.35a117.15,117.15,0,0,0-12.77-1.57L37.19,61.9a5.56,5.56,0,0,0,5.06,6.73c3.85.56,7.71,1.11,11.58,1.45q1.48-9.78,2.91-19.58c.58-4,1.11-8,1.61-11.65C58.38,35.84,56.78,33.81,54.22,33.35Z\"/><path d=\"M57.28,78.81Q51.9,95.49,46.55,112.18a6.62,6.62,0,0,0,12.89,3c2.8-8.68,5.57-17.38,8.41-26a1.79,1.79,0,0,0-.64-2.27c-3.26-2.75-6.46-5.56-9.76-8.42A1.73,1.73,0,0,0,57.28,78.81Z\"/><path d=\"M75,7.5a10.58,10.58,0,0,0-.23,21.15A10.58,10.58,0,1,0,75,7.5Z\"/><path d=\"M105.91,41a1.74,1.74,0,0,0-1.8-1.94,1.73,1.73,0,0,0-1.9,1.7c-.16,2-.2,3.92-.29,5.93l3.66.33C105.7,45,105.86,43,105.91,41Z\"/></g></svg>",
+            "content": "水源珍貴，電解質有效保水幫助行程更省水；一錠咖啡因提神，無須沖泡，維持行走專注；輕量、低卡的維生素C把水變好喝，掃除運動後的身體壓力。",
+            "products": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "name": "跑步",
+            "icon": "<svg id=\"b93ce658-7033-40ef-ac16-8d66ff59a351\" data-name=\"圖層 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 150 130\"><defs><clipPath id=\"fe361001-0194-46a1-b9b6-4a58a5c159b0\"><rect width=\"150\" height=\"130\" style=\"fill:none\"/></clipPath></defs><g style=\"clip-path:url(#fe361001-0194-46a1-b9b6-4a58a5c159b0)\"><path d=\"M35.33,34.21H51.78a3.25,3.25,0,0,0,0-6.49H35.33a3.25,3.25,0,0,0,0,6.49Z\" style=\"fill:#030000\"/><path d=\"M55,56.93a3.24,3.24,0,0,0-3.24-3.24H35.33a3.25,3.25,0,0,0,0,6.49H51.78A3.24,3.24,0,0,0,55,56.93Z\" style=\"fill:#030000\"/><path d=\"M48.53,44a3.25,3.25,0,0,0-3.24-3.25H28.84a3.25,3.25,0,0,0,0,6.5H45.29A3.25,3.25,0,0,0,48.53,44Z\" style=\"fill:#030000\"/><circle cx=\"106.18\" cy=\"24.42\" r=\"9.74\" style=\"fill:#030000\"/><path d=\"M128.38,57.17h-21l-2.58-7.93L105,49A8.86,8.86,0,0,0,90.31,39L72.19,65.48c-2.76,4-1.24,7.57,2.8,10.34L93.25,90.21l-14.14,20a6.26,6.26,0,0,0,10.22,7.23L104.47,96a10.69,10.69,0,0,0-2.11-14.57l-12.75-10,6.24-9.12,1,3.08a6.25,6.25,0,0,0,6,4.32h25.58a6.26,6.26,0,1,0,0-12.51Z\" style=\"fill:#030000\"/><path d=\"M72.26,77.51a6.26,6.26,0,0,0-8.7,1.63L42.28,110.3a6.26,6.26,0,0,0,10.33,7.06L73.9,86.2A6.24,6.24,0,0,0,72.26,77.51Z\" style=\"fill:#030000\"/><path d=\"M56.46,52.45a6.27,6.27,0,0,0,8.66-1.86l8-12.39,7,4.53,5-7.31a15.14,15.14,0,0,1,2.45-2.77L74.65,24.29A6.26,6.26,0,0,0,66,26.15L54.6,43.8A6.26,6.26,0,0,0,56.46,52.45Z\" style=\"fill:#030000\"/></g></svg>",
+            "content": "輕量、方便攜帶，比賽訓練隨時高效補充。電解質有效保水及維持肌肉穩定，咖啡因一錠維持跑中專注，維生素C幫助運動修護，讓每天的訓練更有力。",
+            "products": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "name": "單車",
+            "icon": "<svg id=\"f882afa4-aef7-468a-97d5-ebec7505a07e\" data-name=\"圖層 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 150 130\"><defs><clipPath id=\"e4d5497f-a4e9-4bce-b5f3-366342ddad3a\"><rect width=\"150\" height=\"130\" style=\"fill:none\"/></clipPath></defs><g style=\"clip-path:url(#e4d5497f-a4e9-4bce-b5f3-366342ddad3a)\"><path d=\"M85,27.54a10,10,0,1,1,9.93,10A10.13,10.13,0,0,1,85,27.54Zm52.52,67.38a25,25,0,1,1-25-24.88A25.17,25.17,0,0,1,137.53,94.92ZM130,94.66a17.49,17.49,0,1,0-17.34,17.91A17.46,17.46,0,0,0,130,94.66ZM65.87,86.3A25,25,0,1,1,17.73,98.54c-.06-.38-.17-.76-.26-1.13V92.72c.54-2.11.9-4.29,1.63-6.32a24.92,24.92,0,0,1,46.77-.1ZM60,95.06a17.5,17.5,0,1,0-17.49,17.52A17.4,17.4,0,0,0,60,95.06Zm52.19-30.29v-.06a5,5,0,1,0,0-10c-.13,0-.26,0-.39,0l-.72,0A24.68,24.68,0,0,1,94.52,48c-3.69-3.5-7.28-7.09-11-10.58a9.15,9.15,0,0,0-12.28,0c-4.89,4.72-9.67,9.56-14.47,14.38a9.76,9.76,0,0,0-2.95,6,10.16,10.16,0,0,0,3.48,8.81c4.65,4.25,9.38,8.39,14.11,12.54a2.85,2.85,0,0,1,1.1,2.39c-.05,7.38,0,14.77,0,22.16V105s0,0,0,0a5,5,0,1,0,10,0c0-.13,0-.25,0-.37a4.46,4.46,0,0,0,0-.5c0-9.85,0-19.7,0-29.55a2.4,2.4,0,0,0-.69-1.49q-4.63-4.72-9.36-9.37a5.3,5.3,0,0,0-1.19-.65l12-12.3c3.94,4,7.77,8,12.86,10.39A37.36,37.36,0,0,0,112.16,64.77Z\" style=\"fill:#030000\"/></g></svg>",
+            "content": "長時騎乘、輕量化、快速補給，電解質有效保水及維持肌肉乖乖，咖啡因一錠提高路況專注力及運動表現，維生素C幫助運動修護，減輕隔日負擔。",
+            "products": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "name": "室內運動",
+            "icon": "<svg id=\"ade08fba-269a-4fb4-9848-2fd4d1642a46\" data-name=\"圖層 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 150 130\"><defs><clipPath id=\"adf4c072-4ab1-4a42-a93d-d74a2c4206a4\"><rect width=\"150\" height=\"130\" style=\"fill:none\"/></clipPath></defs><g style=\"clip-path:url(#adf4c072-4ab1-4a42-a93d-d74a2c4206a4)\"><path d=\"M112.45,40.36a8.2,8.2,0,0,1,.12,1.92q-.25,10.26-.56,20.51a6,6,0,0,1-8.69,5.48c-4.14-1.84-8.26-3.73-12.55-5.67V83.88C94.51,86.27,98.24,88.66,102,91a6.57,6.57,0,0,1,3.38,7c-1,7.79-1.85,15.59-2.79,23.37a6,6,0,0,1-11.17,2.84,6.3,6.3,0,0,1-.8-4.18c.68-5.68,1.19-11.38,2.11-17,.42-2.59-.14-4-2.48-5.33-4.47-2.53-8.71-5.49-13.07-8.22a4.1,4.1,0,0,0-4.54,0c-5,3.16-10,6.4-15.08,9.57a1.4,1.4,0,0,0-.76,1.55c.8,6.35,1.54,12.7,2.32,19,.47,3.88-1.42,6.77-4.88,7.38a5.83,5.83,0,0,1-6.89-4.87c-.72-5.18-1.28-10.38-1.9-15.58-.36-3-.68-5.91-1.05-8.87a6.2,6.2,0,0,1,3.16-6.5c3.91-2.46,7.79-5,11.68-7.43V62.57c-.51.21-.91.35-1.29.52L46.63,68.21c-4.43,2-8.67-.67-8.82-5.5-.2-7-.41-14-.57-21a5.82,5.82,0,0,1,4-5.74A6,6,0,0,1,48,38,6.61,6.61,0,0,1,49.23,42c.08,3.38.18,6.76.27,10.14,0,.43,0,.86,0,1.51.74-.33,1.27-.56,1.8-.81,3.26-1.58,6.49-3.21,9.78-4.72a19,19,0,0,1,8.55-1.73c3.26.09,6.53.14,9.78,0a22.4,22.4,0,0,1,10.84,2.38c2.69,1.28,5.34,2.64,8,4,.6.3,1.22.56,2.21,1,0-2.28,0-4.27,0-6.27,0-2.17,0-4.35.22-6.51a5.83,5.83,0,0,1,5.6-5.34A5.93,5.93,0,0,1,112.45,40.36Zm-37.6,4.18a12,12,0,1,0-12-12A12.05,12.05,0,0,0,74.85,44.54ZM19.49,24c-1.41,0-2.81,0-4.22,0A1.7,1.7,0,0,0,13.35,26q0,15,0,29.93c0,1.36.63,2,2,2s2.57,0,3.86,0c1.76,0,2.28-.53,2.28-2.32,0-4.91,0-9.81,0-14.72s0-9.82,0-14.72C21.51,24.61,20.94,24,19.49,24Zm115.05,0c-1.29,0-2.57,0-3.86,0-1.88,0-2.38.49-2.38,2.33V41c0,4.95,0,9.9,0,14.85,0,1.46.59,2,2,2.06s2.74,0,4.11,0,2-.61,2-2q0-15,0-29.93A1.7,1.7,0,0,0,134.54,24Zm4.79,5.44c-1.23,0-1.87.68-1.88,2.1,0,3.14,0,6.27,0,9.4s0,6.27,0,9.4c0,1.36.62,2,1.82,2s1.88-.65,1.88-2q0-9.46,0-18.92C141.15,30.14,140.51,29.46,139.33,29.45Zm-128.76,0c-1.26,0-1.9.7-1.91,2.21,0,3.1,0,6.19,0,9.29s0,6.19,0,9.29c0,1.47.61,2.14,1.85,2.14s1.84-.68,1.84-2.14q0-9.29,0-18.58C12.35,30.19,11.76,29.47,10.57,29.45Zm24,10H24.84c-.93,0-1.6.4-1.63,1.38s.65,1.49,1.64,1.49h9.74c1,0,1.69-.38,1.68-1.44S35.56,39.49,34.58,39.49Zm90.29,0h-4.81c-1.56,0-3.13,0-4.69,0-1,0-1.77.27-1.84,1.41-.06.91.62,1.46,1.79,1.46h9.5c1.17,0,1.85-.56,1.78-1.47S125.85,39.48,124.87,39.49ZM52.69,42.4c1.53,0,3.06,0,4.58,0h4.59c1,0,1.66-.34,1.73-1.41s-.58-1.5-1.74-1.5c-3.06,0-6.11,0-9.16,0-1,0-1.66.35-1.74,1.4S51.53,42.39,52.69,42.4Zm33.52-1.5c-.07.93.59,1.49,1.75,1.5,1.53,0,3.06,0,4.59,0h4.58c1,0,1.66-.35,1.74-1.41s-.59-1.5-1.75-1.5c-3.06,0-6.12,0-9.17,0C87,39.49,86.29,39.84,86.21,40.9Zm59.62-1.41c-.8,0-1.6,0-2.4,0a1.31,1.31,0,0,0-1.37,1.37,1.37,1.37,0,0,0,1.37,1.51c.4,0,.8,0,1.2,0h0c.4,0,.81,0,1.21,0a1.39,1.39,0,0,0,1.49-1.52A1.35,1.35,0,0,0,145.83,39.49Zm-139.37,0c-.32-.19-.85,0-1.29,0h0c-.4,0-.8,0-1.2,0a1.36,1.36,0,0,0-1.48,1.4,1.34,1.34,0,0,0,1.39,1.48,16.61,16.61,0,0,0,2.64,0,1.21,1.21,0,0,0,1.19-1.48A2.78,2.78,0,0,0,6.46,39.53Z\" style=\"fill:#030000\"/></g></svg>",
+            "content": "低熱量、好喝健康飲，運動前電解質有效保水，維持肌肉表現，維生素C增加運動後修護 ; 咖啡因提升專注及爆發力、增加代謝，運動效率事半功倍。",
+            "products": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "工作",
+            "icon": "<svg id=\"f81ca325-20fa-4636-8374-0982296d48af\" data-name=\"圖層 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 150 130\"><defs><clipPath id=\"be41420b-e207-4475-aa2a-c7bd5eaf2a94\"><rect width=\"150\" height=\"130\" style=\"fill:none\"/></clipPath></defs><g style=\"clip-path:url(#be41420b-e207-4475-aa2a-c7bd5eaf2a94)\"><path d=\"M56.28,81.52q8.34,0,16.67,0a4.94,4.94,0,0,1,5,3.14q5.55,14.07,10.92,28.21a5.19,5.19,0,0,1-4.43,7c-2.44.28-4.57-1.13-5.6-3.77C75.9,108.53,73,101,70.08,93.41A1.74,1.74,0,0,0,68.15,92c-7.6.06-15.2,0-22.79.08-5.51,0-9.42-3.68-9.44-9.16q0-16.42,0-32.83a8.89,8.89,0,0,1,5.94-8.65,10,10,0,0,1,10.79,3c3.86,4.82,7.67,9.68,11.59,14.46A3.28,3.28,0,0,0,66.47,60c4.76,0,9.52-.06,14.29-.09a22.1,22.1,0,0,1,4.23.17,4.24,4.24,0,0,1,3.3,4.84A4.35,4.35,0,0,1,84,68.66c-6.77.07-13.54.09-20.3.29a4.71,4.71,0,0,1-4.58-2.15c-1.37-2-3-3.84-4.84-6.13V81.52ZM45.7,14.17A10.85,10.85,0,1,0,56.6,24.92,10.85,10.85,0,0,0,45.7,14.17ZM96.86,120.22h3.37V78.9h25c.47-3.19.26-3.44-2.67-3.44H71.75v3.37H96.86Zm-35.35.86H64.8c0-.57.1-1.94.1-2.43q0-9.27,0-18.54c0-3.87-2.23-6.13-6.11-6.15-7,0-13.95,0-20.92,0-3.79,0-4.12-.32-4.12-4V59.43H30.43c0,.57-.07,1.17-.07,1.77q0,14.88,0,29.75c0,4.2,2.2,6.38,6.4,6.38H58.19c2.69,0,3.32.63,3.32,3.29v20.45Zm49.3-71.84-2.09-1.05c-.78,1.51-1.54,3-2.28,4.41-2.56,5-5.18,10.07-7.65,15.17a5.25,5.25,0,0,1-5.48,3.33c-6.38-.18-12.77-.13-19.16-.16-.39,0-.77.06-1.26.1v2.27h5.25c5.48,0,11,0,16.45,0a5.91,5.91,0,0,0,5.61-3.17C103.75,63.24,107.23,56.31,110.81,49.24Z\" style=\"fill:#030000\"/></g></svg>",
+            "content": "咖啡因一錠提神8小時，恢復思緒，工作無往不利。電解質加維生素C，低熱量無負擔，增加平日飲水量，應酬隔日上班也好犀(C)利。",
+            "products": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "開車",
+            "icon": "<svg id=\"aec7947f-a60c-4c7a-8c66-d32a34321d93\" data-name=\"圖層 1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 150 130\"><defs><clipPath id=\"ebd79a27-5e04-4c6f-a14d-14f6e700446d\"><rect width=\"150\" height=\"130\" style=\"fill:none\"/></clipPath></defs><g style=\"clip-path:url(#ebd79a27-5e04-4c6f-a14d-14f6e700446d)\"><path d=\"M77.5,67.63a2.93,2.93,0,1,1-2.93,2.93A2.93,2.93,0,0,1,77.5,67.63Z\" style=\"fill:#030000\"/><path d=\"M77.5,17.6a50,50,0,1,0,50,50A50.14,50.14,0,0,0,77.5,17.6Zm0,11.92a38.16,38.16,0,0,1,37.65,32.25H105a23,23,0,0,1-16.8-7.1,14.67,14.67,0,0,0-21.38,0A23,23,0,0,1,50,61.77H39.85A38.16,38.16,0,0,1,77.5,29.52Zm0,49.83a8.79,8.79,0,1,1,8.79-8.79A8.8,8.8,0,0,1,77.5,79.35ZM42,81.52c3.35-1.32,5.77-2.17,9.1-2.17A17.61,17.61,0,0,1,68.51,99.58h0a17.5,17.5,0,0,1-1.39,4.71A38.25,38.25,0,0,1,42,81.52Zm45.87,22.77a17.27,17.27,0,0,1-1.39-4.71h0a17.62,17.62,0,0,1,21.57-19.73A43.42,43.42,0,0,1,113,81.52,38.25,38.25,0,0,1,87.89,104.29Z\" style=\"fill:#030000\"/></g></svg>",
+            "content": "一錠補給，快速提神，維持8小時路況專注力，避免補充過多液體的站站停，快速安全抵達目的地。",
+            "products": [
+                3
+            ]
+        }
+    ],
+    "invoice" : {
 
+        "rules" : [
+            
+            {
+                "title" : "活動時間",
+                "content" : [
+                    "發票有效時間：110/10/06(三) - 111/12/31 (五)",
+                    "發票登錄時間：110/10/06(三) - 111/01/03 23:59(一)"
+                ]
+            },
+            {
+                "title" : "活動說明",
+                "style" : "decimal",
+                "content" : [
+                    "活動期間內，單筆發票凡於全家購買鋭速系列商品指定品項任1件（爆汗１小時神補給包、耐力８小時神充電包、流汗６小時神補水包），並至活動頁面登錄發票號碼，即可參加抽獎，每人登錄發票張數不限，登錄越多中獎機會越高。月月抽出Apple Watch等獎項。",
+                    "每月抽出得獎者，得獎者公布於活動網站，未中獎之發票可繼續參加下一次抽獎。",
+                    "本活動同一發票僅可登錄乙次，發票無法重複登錄，每張發票僅限一次中獎機會，每人中獎次數不限，登錄越多中獎機率越大",
+                    "若退貨則喪失參加本活動之資格，且本活動限非營業買受人參加，登錄之發票不得打入買方之統一編號。",
+                    "本活動需登錄實體發票及發票隨機碼，請務必保留實體發票，購買時若發票存於載具者，請索取實體發票"
+                ]
+            },
+
+            {
+                "title" : "活動獎項",
+                "content" : [
+                    "頭獎：Apple Watch 6 40mm GPS，1組/月（共三組），市價$12,900",
+                    "貳獎：AIVÍA艾微漾 皙漾光微針淡斑貼片禮盒，2組/月（共六組），市價$3,980",
+                    "獎品之樣式為隨機出貨，恕無法指定。"
+                ]
+            }
+
+        ],
+
+        "notices" : [
+            
+            {
+                "title" : "兌獎方式",
+                "style" : "decimal",
+                "content" : [
+                    "於本活動網頁公布得獎名單後，活動小組會以簡訊及電子郵件寄發中獎通知函，得獎者須於七天內（請參閱上表）以電子郵件回復所需兌獎資訊，逾時將失去得獎資格，不得異議，將抽出下一位得獎者。",
+                    "得獎者需檢附之相關文件（以Email回覆）：1.實體發票影本 2.姓名 3.電話 4.地址。若獎品獎項價值超過新台幣1,000元，將列入本年度之個人綜合所得稅申報，請協助填寫中獎通知信並提供相關資料給主辦單位，主辦單位將開立扣繳憑單寄送給中獎者。以上兌獎所需文件，缺一不可，如有欠缺、不完整、不正確或發票內商品與活動辦法不符，恕無法兌獎。",
+                    "若遇中獎者之發票及消費明細正本無法符合活動資格時(包括但不限於：無法確認品項、發票號碼、數量、消費日期)，則視為無效。若發票存於電子載具，請務必於購買商品時告知店家印出消費明細正本，作為兌獎作業之依據，如不符上述之規定，將判定喪失得獎資格。",
+                    "發票所示之購買日期需於活動期間內，發票號碼如輸入營業人之統一編號視同無效。中獎發票正本(含明細)一旦經寄交活動小組兌領獎項並簽署領獎領據後，即不得要求退還，中獎者不得異議。",
+                    "請確實填寫發票登錄相關資訊，以免因資料填寫錯誤導致無法收到中獎通知，影響中獎權益。",
+                    "如遇國定假日或天災等不可抗力因素，主辦單位及/或活動執行單位有權變 更抽獎日期及公告日期。"
+                ]
+            },
+            {
+                "title" : "注意事項",
+                "style" : "disc",
+                "content" : [
+                     "「買鋭速全家系列產品，月月抽Apple Watch」(以下稱本活動)係由寶齡富錦生技股份有限公司 (以下稱主辦單位)所舉辦，消費者一般個人資料(包括姓名、地址、電話、Email帳號、身分證正反面影本)之蒐集、處理及利用並為連絡及寄送獎項之用(以下簡稱「活動執行單位」)。消費者於參加本活動之同時，即同意接受本活動之活動辦法與注意事項之規範，並同意主辦單位及/或活動執行單位蒐集、處理及利用參加人之姓名、地址、電話、Email帳號及、身分證正反面影本等之一般個人資料，如不同意，恕無法參加活動或獎項寄送。消費者如有違反，主辦單位及/或活動執行單位得取消其參加及得獎資格，並得就因此所產生之損害，向該消費者請求損害賠償。",
+                    "本活動如有任何因電腦、網路、電話、技術、郵寄或其他不可歸責於主辦單 位及/或活動執行單位之事由，而使參與本活動者所寄出之資料有延遲、遺失、錯誤、無法辨識或毀損所導致資料無效之情況，贈獎資格視同放棄，主辦單位及/或活動執行單位不負任何法律責任，參與本活動者或得獎者亦不得因此異議。",
+                    "活動參與者應保證填寫或提出之資料均為真實，且未冒用或盜用任何第三人之資料，如冒用或盜用任何第三人之資料之法律責任由活動參與者自行負責，概與主辦單位及/或活動執行單位無關。如查獲不實，主辦單位及/或活動執行單位除撤銷其得獎資格，並無提供所獲獎項之義務，若獎項業經配送，並有向中獎者請求懲罰性賠償金及相關行政費用與他損害賠償之權利。",
+                    "所有中獎者需於活動兌獎指定日期前詳實填妥並回寄中獎收據、身分證正反面影本、中獎發票證明、應繳稅者應提供完稅之匯款證明，中獎發票證明須有明確雀巢茶品活動指定商品2瓶以上交易明細，方可兌獎，如有遺失、毀損、提供標示不完整、無法辨識發票號碼或購買品項，視同無效且無法領獎。主辦單位及/或活動執行單位對於中獎者所檢附之兌獎文件有最終審核及詮釋權。",
+                    "中獎者若查核發現有退貨的紀錄，視同自動放棄中獎資格，主辦單位及/或活動執行單位將不另行通知。",
+                    "本活動僅限居住於台灣、金門、澎湖、馬祖地區之中華民國國民參加，獎品寄送地址限於台灣、金門、澎湖、馬祖地區。",
+                    "消費者若以惡意之電腦程式或其他明顯違反活動公平性之方式，意圖混淆或影響活動結果者，一經主辦單位及/或活動執行單位查覺，可立即取消消費者之得獎資格，並可追回獎品。",
+                    "中獎者若未滿20歲，除中獎者之身分證正反面影本外，需另附法定代理人之身分證正反面影本協同辦理領獎及一切相關手續後方能領獎。",
+                    "本活動獎品以實物為準，中獎人不得要求折抵現金、退換、轉售或折換其他物品。主辦單位及/或活動執行單位保有修改或變更活動方式及更換活動贈品之權利。本活動獎品如遇有缺貨或不可抗力之因素無法提供時，主辦單位及/或活動執行單位保留更換等值贈品或現金的權利。",
+                    "依中華民國稅法規定，獎項金額若超過新台幣1,000元，得獎人須提供身份證正、反面影本，以利申報中獎扣繳憑單，並請依規定填寫並繳交相關中獎收據。得獎者若無法配合，則視為自動棄權，不具得獎資格。獎項價值超過新台幣20,000元者，中獎者需依法繳交機會中獎所得稅10%。獎項價值在1,000元以上未達20,000元者不需預先扣繳，但主辦單位及/或活動執行單位仍需統一於活動年之隔年2月份開立並寄發各類所得稅扣繳憑單給中獎者，以利中獎人申報之用。如果得獎者不願意給付得獎商品之稅額或不願意提出身分證明，則視為得獎者自動棄權，不具得獎資格。",
+                    "除上述注意事項，如有未盡事宜，主辦單位及/或活動執行單位擁有一切修改及取消本活動的權利而不作事前通知，亦有權對本活動之所有事宜做出解釋或裁決及變更活動獎品及辦法之權利，任何變更內容及其他詳細注意事項，則公告於活動網站。",
+                    "上述條款之準據法為台灣地區境內法律，相關爭議應以台北地方法院為第一審管轄法院。",
+                    "客服信箱：support@raceon.com.tw"
+                ]
+            }
+        ]
+
+    }
 }

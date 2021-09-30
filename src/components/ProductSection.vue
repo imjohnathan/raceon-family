@@ -50,7 +50,7 @@
                       'hover:w-bg-[#f0d500]': prId == 1, 
                       'hover:(w-bg-[#0096df] w-text-white w-border-black)': prId == 2, 
                       'hover:(w-bg-[#e50012] w-text-white w-border-black)': prId == 3 }" 
-                    class="w-block w-border-1 w-inline-block w-border-solid w-py-2 w-px-6 w-rounded-4xl w-text-xl w-transition-all">
+                    class="w-border-1 w-inline-block w-border-solid w-py-2 w-px-6 w-rounded-4xl w-text-xl w-transition-all">
                     {{prInside.name}}</a>
                   </template>
                   <!--內容物按鈕--></div>

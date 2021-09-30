@@ -1,127 +1,192 @@
 <template>
   <div>
-    <form class="fm_invoice-form w-grid w-grid-cols-2 w-grid-rows-7">
+    <form class="fm_invoice-form w-grid w-grid-cols-2 w-grid-rows-7 w-gap-y-4 w-gap-x-10">
       <div class="w-col-span-2">
-        <div>購買商品：</div>
-        <div class="w-flex w-justify-evenly w-items-center w-bg-white w-rounded-full w-py-2 w-text-lg">
-            <div>
+        <div class="form-title">
+            <div>購買商品</div>
+            <div class="w-text-red-500 w-font-bold">請選擇您購買的商品</div>
+            </div>
+        <div class="w-flex w-justify-between w-items-center w-flex-nowrap w-px-8 form-row ">
+            <div class="form-box">
+                <label>
                 <input
                 type="checkbox"
-                id="fm1"
                 value="爆汗１小時神補給包"
                 v-model="products"
-                class="checkbox w-mr-1"
+                class="checkbox"
                 />
-                <label for="fm1">爆汗１小時神補給包</label>
+                <span class="label-text">爆汗１小時神補給包</span>
+                </label>
             </div>
-            <div>
+            <div class="form-box">
+                <label>
                 <input
                 type="checkbox"
-                id="fm6"
                 value="流汗６小時神捕水包"
                 v-model="products"
-                class="w-mr-1"
+                class="checkbox"
                 />
-                <label for="fm6">流汗６小時神捕水包</label>
+                <span class="label-text">流汗６小時神捕水包</span>
+                </label>
             </div>
-            <div>
+            <div class="form-box">
+                <label>
                 <input
                 type="checkbox"
-                id="fm8"
                 value="耐力８小時神充電包"
                 v-model="products"
-                class="w-mr-1"
+                class="checkbox"
                 />
-                <label for="fm8">耐力８小時神充電包</label>
+                <span class="label-text">耐力８小時神充電包</span>
+                </label>
             </div>
         </div>
       </div>
 
       <div class="w-col-span-2">
-        從哪裡得知抽獎資訊：
-        <input
-          type="radio"
-          id="rf1"
-          value="社群平台"
-          v-model="invoice.referral"
-        />
-        <label for="rf1">社群平台</label>
-        <input
-          type="radio"
-          id="rf2"
-          value="Youtube"
-          v-model="invoice.referral"
-        />
-        <label for="rf2">Youtube</label>
-        <input
-          type="radio"
-          id="rf3"
-          value="網路廣告"
-          v-model="invoice.referral"
-        />
-        <label for="rf3">網路廣告</label>
-        <input
-          type="radio"
-          id="rf4"
-          value="通路佈置物"
-          v-model="invoice.referral"
-        />
-        <label for="rf4">通路佈置物</label>
-        <input
-          type="radio"
-          id="rf5"
-          value="官方網站"
-          v-model="invoice.referral"
-        />
-        <label for="rf5">官方網站</label>
+        <div class="form-title">從哪裡得知抽獎資訊</div>
+         <div class="w-flex w-justify-between w-items-center w-flex-nowrap w-px-8 form-row">
+             <div class="form-box">
+                <label>
+                <input
+                  type="radio"
+                  value="社群平台"
+                  v-model="invoice.referral"
+                  class="checkbox"
+                />
+                <span class="label-text">社群平台</span>
+                </label>
+            </div>
+             <div class="form-box">
+                <label>
+                <input
+                  type="radio"
+                  value="Youtube"
+                  v-model="invoice.referral"
+                  class="checkbox"
+                />
+                <span class="label-text">Youtube</span>
+                </label>
+            </div>
+             <div class="form-box">
+                <label>
+                <input
+                  type="radio"
+                  value="網路廣告"
+                  v-model="invoice.referral"
+                  class="checkbox"
+                />
+                <span class="label-text">網路廣告</span>
+                </label>
+            </div>
+             <div class="form-box">
+                <label>
+                <input
+                  type="radio"
+                  value="通路佈置物"
+                  v-model="invoice.referral"
+                  class="checkbox"
+                />
+                <span class="label-text">通路佈置物</span>
+                </label>
+            </div>
+             <div class="form-box">
+                <label>
+                <input
+                  type="radio"
+                  value="官方網站"
+                  v-model="invoice.referral"
+                  class="checkbox"
+                />
+                <span class="label-text">官方網站</span>
+                </label>
+            </div>
+        </div>
       </div>
 
       <div>
-        姓名：
-        <input type="text" name="name" v-model="invoice.name" required />
+        <div class="form-title">姓名</div>
+        <div class="w-flex w-justify-center w-items-center form-row">
+            <input type="text" name="name" v-model="invoice.name" required />
+        </div>
       </div>
+
+
       <div>
-        手機號碼：
-        <input type="text" name="phone" v-model="invoice.phone" required />
+        <div class="form-title">手機號碼</div>
+        <div class="w-flex w-justify-center w-items-center form-row">
+            <input type="text" name="phone" v-model="invoice.phone" required />
+            </div>
       </div>
 
       <div class="w-col-span-2">
-        Email：
+         <div class="form-title">Email</div>
+         <div class="w-flex w-justify-center w-items-center form-row">
         <input type="email" name="email" v-model="invoice.email" required />
+         </div>
       </div>
 
       <div>
-        發票號碼：
+        <div class="form-title">發票號碼</div>
+        <div class="w-flex w-justify-center w-items-center form-row">
         <input
           type="text"
           name="invoice_number"
           v-model="invoice.invoice_number"
           required
         />
+        </div>
       </div>
 
       <div>
-        發票日期：
-        <input
+          
+        <div class="form-title">發票日期</div>
+        <div class="w-flex w-justify-center w-items-center form-row">
+            <input
           type="text"
           name="name"
           v-model="invoice.invoice_date"
           required
-        />
+        /></div>
       </div>
 
       <div>
-        發票隨機碼：
+        <div class="form-title">發票隨機碼</div>
+        <div class="w-flex w-justify-center w-items-center form-row">
         <input
           type="text"
           name="invoice_code"
           v-model="invoice.invoice_code"
           required
         />
+        </div>
       </div>
 
-      <div>同意隱私權聲明</div>
-      <div class="w-col-span-2">送出按鈕</div>
+      <div class="w-flex w-items-center">
+            <div class="form-box w-mt-8">
+                <label>
+                <input
+                type="checkbox"
+                value="true"
+                class="checkbox"
+                />
+                <span class="label-text">同意隱私權聲明以及活動規則辦法</span>
+                </label>
+            </div>
+      </div>
+      <div class="w-col-span-2 w-flex w-items-center">
+         <button 
+            class="
+            hover:(w-bg-white) 
+            w-border-1 w-border-solid w-border-black
+            w-bg-transparent
+            w-py-2 w-px-6 
+            w-rounded-full 
+            w-text-2xl 
+            w-transition-all"
+            type="submit" :disabled="loading || invalid"
+            @click="submitCheck">送出資料</button>
+      </div>
     </form>
   </div>
 </template>
@@ -153,75 +218,61 @@ export default {
 };
 </script>
 <style scoped>
-:root {
-    --pc: 0 0% 100%;
-    --s: 314 100% 47.1%;
-    --sf: 314 100% 37.1%;
-    --sc: 0 0% 100%;
-    --a: 174 60% 51%;
-    --af: 174 59.8% 41%;
-    --ac: 0 0% 100%;
-    --nc: 0 0% 100%;
-}
-:root {
-    --p: 259 94.4% 51.2%;
-    --pf: 259 94.3% 41%;
-    --n: 219 14.1% 27.8%;
-    --nf: 222 13.4% 19%;
-    --b1: 0 0% 100%;
-    --b2: 210 20% 98%;
-    --b3: 216 12.2% 83.9%;
-    --bc: 215 27.9% 16.9%;
-    --in: 207 89.8% 53.9%;
-    --su: 174 100% 29%;
-    --wa: 36 100% 50%;
-    --er: 14 100% 57.1%;
-    --rounded-box: 1rem;
-    --rounded-btn: 0.5rem;
-    --rounded-badge: 1.9rem;
-    --animation-btn: 0.25s;
-    --animation-input: .2s;
-    --padding-card: 2rem;
-    --btn-text-case: uppercase;
-    --btn-focus-scale: 0.95;
-    --navbar-padding: .5rem;
-    --border-btn: 1px;
-    --tab-border: 1px;
-    --tab-radius: 0.5rem;
-    --tab-spacer: 0.5rem;
-    --focus-ring: 2px;
-    --focus-ring-offset: 2px;
-    --glass-opacity: 30%;
-    --glass-border-opacity: 10%;
-    --glass-reflex-degree: 100deg;
-    --glass-reflex-opacity: 10%;
-    --glass-blur: 40px;
-    --glass-text-shadow-opacity: 5%;
-}
-.fm_invoice-form input {
-  width: auto;
-}
 .fm_invoice-form label {
   margin: 0;
 }
 
+.fm_invoice-form .form-title {
+ @apply w-text-lg w-mb-1 w-flex w-justify-between;
+}
+.fm_invoice-form .form-row {
+ height: 60px;
+ @apply w-bg-white w-rounded-full w-py-2;
+}
+
+.fm_invoice-form .form-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.fm_invoice-form label {
+    @apply 
+    w-p-2
+    w-flex w-cursor-pointer 
+    w-items-center w-justify-center 
+    w-select-none;
+}
+.fm_invoice-form .label-text {
+     @apply  w-text-lg ;
+    line-height: 1.25rem;
+}
 .fm_invoice-form .checkbox {
-    --bc: 215 27.9% 16.9%;
-    --fg: 0 0% 100%;
-    --chkbg: 215 27.9% 16.9%;
-    --chkfg: 0 0% 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     --tw-border-opacity: 1;
     --tw-border-opacity: 0.2;
-    border-color: hsla(var(--bc)/var(--tw-border-opacity,1));
+    border-color: #000;
     border-width: 1px;
     cursor: pointer;
     height: 1.5rem;
     width: 1.5rem;
-    border-radius: .5rem;
     border-style: solid;
+    @apply w-transition-all w-mr-2;
+}
+.fm_invoice-form .checkbox:checked{
+    border-color: transparent;
+    background-color: #000;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    @apply w-transition-all ;
+}
+
+.fm_invoice-form input[type='text'],
+.fm_invoice-form input[type='email'] {
+     @apply  w-p-0 w-h-full w-w-full w-mx-6 w-border-0 w-text-lg;
 }
 
 </style>
