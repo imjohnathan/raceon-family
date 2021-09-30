@@ -48,15 +48,10 @@
     </div>
  </div>   
 </template>
+
 <script>
 export default {
-  methods: {
-    getSrc(name) {
-      const path = `../assets/${name}`;
-      const modules = import.meta.globEager("../assets/*");
-      return modules[path].default;
-    },
-  },
+  //mixins: [getImg],
   data: function () {
     return {
       activities: [

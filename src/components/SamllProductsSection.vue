@@ -69,6 +69,7 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import SwiperCore, { EffectFade, Pagination } from "swiper";
 
+
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
@@ -80,13 +81,6 @@ export default {
   component: {
     Swiper,
     SwiperSlide,
-  },
-  methods: {
-    getSrc(name) {
-      const path = `../assets/${name}`;
-      const modules = import.meta.globEager("../assets/*");
-      return modules[path].default;
-    },
   },
   data: function () {
     return {

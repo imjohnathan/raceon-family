@@ -436,13 +436,6 @@ export default {
       ],
     };
   },
-  methods: {
-    getSrc(name) {
-       const path = `./assets/${name}.png`;
-       const modules = import.meta.globEager("./assets/*.png");
-       return modules[path].default;
-   }
-  },
 };
 </script>
 

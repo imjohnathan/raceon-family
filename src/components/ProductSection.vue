@@ -1,11 +1,11 @@
 
-<template lang="">
+<template>
   <div :class="{'w-bg-[#b8daea]': prBg}" :id="`fm_pr${prId}`">
           <div class="w-max-w-screen-lg w-mx-auto w-px-6 w-pb-10">
               <div class="w-flex">
                 <div class="w-w-2/5"></div>
                 <div  class="w-flex w-w-3/5">
-                  <template v-for="(prTag,key) in prTags.split(',')" >
+                  <template v-for="(prTag,key) in prTags.split(',')"  :key="prTag">
                   <div 
                   :class="{ 
                     'w-ml-4': key == prTags.split(',').length - 1,
@@ -43,7 +43,7 @@
                   </div>
                 <div class="w-flex w-flex-col w-justify-around w-pl-8 w-my-8">
                   <h4>內容物：</h4>
-                  <template v-for="(prInside,key) in prInsides" >
+                  <template v-for="prInside in prInsides" :key="prInside">
                     <a 
                     :href="prInside.link" 
                     :class="{ 
@@ -62,6 +62,7 @@
           </div>
       </div>
 </template>
+
 <script>
 export default{
     props: {
@@ -74,13 +75,6 @@ export default{
       prPromoprice: Number,
       prInsides: Array
   },
-    methods: {
-    getSrc(name) {
-       const path = `../assets/${name}`;
-       const modules = import.meta.globEager("../assets/*");
-       return modules[path].default;
-   }
-  }
 
 }
 
