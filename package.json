@@ -7,10 +7,21 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "@vee-validate/i18n": "^4.5.2",
+    "@vee-validate/rules": "^4.5.2",
+    "axios": "^0.22.0",
     "swiper": "^7.0.6",
+    "v-calendar": "^3.0.0-alpha.5",
+    "v-smooth-scroll": "^2.0.0-beta.1",
+    "vee-validate": "^4.5.2",
     "vite-plugin-compress": "^2.1.0",
     "vite-plugin-windicss": "^1.4.7",
     "vue": "^3.2.13",
+    "vue-axios": "^3.3.7",
+    "vue-recaptcha-v3": "^2.0.1",
+    "vue-scrollactive": "^0.9.3",
+    "vue3-datepicker": "^0.2.5",
     "windicss": "^3.1.8"
   },
   "devDependencies": {

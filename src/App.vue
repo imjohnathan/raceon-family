@@ -9,11 +9,11 @@
       <Navbar />
     </section>
 
-    <section>
-      <BreifVideo video="https://www.youtube.com/embed/gZEBDahq7F0?controls=0&autoplay=1&mute=1" />
+    <section id="sec1">
+      <BreifVideo :video="youtube" />
     </section>
 
-    <section>
+    <section id="sec2">
       <Title title="產品組合"/>
       <template v-for="product in products" :key="product">
         <ProductSection
@@ -29,47 +29,46 @@
       </template>
     </section>
 
-    <section>
+    <section id="sec3">
       <Title title="內容物說明" />
     <SamllProductsSection />
     </section>
 
-    <section>
+    <section id="sec4">
       <Title title="好評推薦" />
     <Testimonies />
     </section>
 
-    <section>
+    <section id="sec5">
       <Title title="適用族群" />
     <Suitable />
     </section>
 
-    <section>
+    <section id="sec6">
       <Title title="使用時機" />
     <Timing />
     </section>
 
-    <section>
+    <section id="sec7">
       <Title title="購買通路" />
     <SalesVendor />
     </section>
 
-    <section>
+    <section id="sec8">
       <Title title="發票登錄抽獎活動" />
       <Invoice />
     </section>
 
-    <section>
-      <div class="w-container w-mx-auto w-py-30 w-flex w-justify-center w-items-center w-bg-black">
-        <img class="w-w-60" src="//cdn.cybassets.com/s/files/12556/theme/38737/assets/./1630560740_4a5da051_logo-animate_white.svg?" />
+    <section class="w-bg-black">
+      <div class="w-container w-mx-auto w-py-30 w-flex w-justify-center w-items-center">
+        <img class="w-w-60" src="https://cdn.cybassets.com/s/files/12556/theme/38737/assets/logo-animate_white.svg" />
       </div>
     </section>
-
-
   </main>
 
 </template>
 <script setup>
+//component
 import KV from "./components/KV.vue";
 import Navbar from "./components/Navbar.vue";
 import BreifVideo from "./components/BreifVideo.vue";
@@ -81,8 +80,9 @@ import Suitable from "./components/Suitable.vue";
 import Timing from "./components/Timing.vue";
 import SalesVendor from "./components/SalesVendor.vue";
 import Invoice from "./components/Invoice.vue";
-
+//Data
 import DB from "./db/db.json";
+
 </script>
 
 <script>
@@ -102,14 +102,26 @@ export default {
   },
   data: function () {
     return {
-      products: DB.products
+      products: DB.products,
+      youtube: '',
+      google: ''
     };
   },
+  beforeMount: function() {
+    this.youtube = document.querySelector('#app').getAttribute('data-youtube');
+  }  
 };
 </script>
 
 <style>
 .site-page{
   padding-bottom: 0 ;
+}
+.family-series svg:not(:root) {
+    width:100%;
+    height: auto;
+}
+.footer-nav{
+  display: none;
 }
 </style>

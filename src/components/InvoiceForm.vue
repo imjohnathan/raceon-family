@@ -1,41 +1,53 @@
 <template>
   <div>
-    <form class="fm_invoice-form w-grid w-grid-cols-2 w-grid-rows-7 w-gap-y-4 w-gap-x-10">
-      <div class="w-col-span-2">
+    <Form class="fm_invoice-form w-grid w-gap-y-4 md:(w-grid-cols-2 w-gap-y-4 w-gap-x-10)" @submit="submitInvoice">
+
+      <div class="md:w-col-span-2 w-flex w-flex-col w-justify-center">
         <div class="form-title">
             <div>購買商品</div>
-            <div class="w-text-red-500 w-font-bold">請選擇您購買的商品</div>
+            <ErrorMessage class="form-error" name="products" as="div"/>
             </div>
-        <div class="w-flex w-justify-between w-items-center w-flex-nowrap w-px-8 form-row ">
+         <div class="
+         w-flex 
+         w-justify-between
+         md:w-items-center
+         <md:(w-flex-col w-items-start) 
+         w-px-8 form-row">
             <div class="form-box">
                 <label>
-                <input
+                <Field
+                name="products"
                 type="checkbox"
                 value="爆汗１小時神補給包"
                 v-model="products"
                 class="checkbox"
+                rules="length:1"
                 />
                 <span class="label-text">爆汗１小時神補給包</span>
                 </label>
             </div>
             <div class="form-box">
                 <label>
-                <input
+                <Field
+                name="products"
                 type="checkbox"
                 value="流汗６小時神捕水包"
                 v-model="products"
                 class="checkbox"
+                rules="length:1"
                 />
                 <span class="label-text">流汗６小時神捕水包</span>
                 </label>
             </div>
             <div class="form-box">
                 <label>
-                <input
+                <Field
+                name="products"
                 type="checkbox"
                 value="耐力８小時神充電包"
                 v-model="products"
                 class="checkbox"
+                rules="length:1"
                 />
                 <span class="label-text">耐力８小時神充電包</span>
                 </label>
@@ -43,60 +55,76 @@
         </div>
       </div>
 
-      <div class="w-col-span-2">
-        <div class="form-title">從哪裡得知抽獎資訊</div>
-         <div class="w-flex w-justify-between w-items-center w-flex-nowrap w-px-8 form-row">
+      <div class="md:w-col-span-2 w-flex w-flex-col w-justify-center">
+        <div class="form-title">
+          <div>從哪裡得知抽獎資訊</div>
+          <ErrorMessage class="form-error" name="referral" as="div"/></div>
+         <div class="
+         w-flex 
+        w-flex-wrap w-items-start
+         md:(w-items-center w-justify-between)
+         w-px-8 form-row">
              <div class="form-box">
                 <label>
-                <input
+                <Field
+                  name="referral"
                   type="radio"
                   value="社群平台"
                   v-model="invoice.referral"
                   class="checkbox"
+                  rules="required"
                 />
                 <span class="label-text">社群平台</span>
                 </label>
             </div>
              <div class="form-box">
                 <label>
-                <input
+                <Field
+                  name="referral"
                   type="radio"
                   value="Youtube"
                   v-model="invoice.referral"
                   class="checkbox"
+                  rules="required"
                 />
                 <span class="label-text">Youtube</span>
                 </label>
             </div>
              <div class="form-box">
                 <label>
-                <input
+                <Field
+                  name="referral"
                   type="radio"
                   value="網路廣告"
                   v-model="invoice.referral"
                   class="checkbox"
+                  rules="required"
                 />
                 <span class="label-text">網路廣告</span>
                 </label>
             </div>
              <div class="form-box">
                 <label>
-                <input
+                <Field
+                  name="referral"
                   type="radio"
                   value="通路佈置物"
                   v-model="invoice.referral"
                   class="checkbox"
+                  rules="required"
                 />
                 <span class="label-text">通路佈置物</span>
                 </label>
             </div>
              <div class="form-box">
                 <label>
-                <input
+                <Field
+                  name="referral"
                   type="radio"
                   value="官方網站"
                   v-model="invoice.referral"
                   class="checkbox"
+                  rules="required"
                 />
                 <span class="label-text">官方網站</span>
                 </label>
@@ -104,104 +132,191 @@
         </div>
       </div>
 
-      <div>
-        <div class="form-title">姓名</div>
+      <div class="w-flex w-flex-col w-justify-center">
+        <div class="form-title">
+          <div>姓名</div>
+          <ErrorMessage class="form-error" name="name" as="div"/>
+          </div>
         <div class="w-flex w-justify-center w-items-center form-row">
-            <input type="text" name="name" v-model="invoice.name" required />
+            <Field 
+            type="text" name="name" v-model="invoice.name" 
+            rules="required" required />
         </div>
       </div>
 
 
-      <div>
-        <div class="form-title">手機號碼</div>
+      <div class="w-flex w-flex-col w-justify-center">
+        <div class="form-title">
+          <div>手機號碼</div>
+          <ErrorMessage class="form-error" name="phone" as="div"/>
+          </div>
         <div class="w-flex w-justify-center w-items-center form-row">
-            <input type="text" name="phone" v-model="invoice.phone" required />
+            <Field type="text" name="phone" v-model="invoice.phone" 
+            :rules="{ regex: /^09[0-9]{8}$/, required }"
+            required />
             </div>
       </div>
 
-      <div class="w-col-span-2">
-         <div class="form-title">Email</div>
+      <div class="md:w-col-span-2 w-flex w-flex-col w-justify-center">
+         <div class="form-title">
+           <div>Email</div>
+           <ErrorMessage class="form-error" name="email" as="div"/>
+           </div>
          <div class="w-flex w-justify-center w-items-center form-row">
-        <input type="email" name="email" v-model="invoice.email" required />
+        <Field type="email" name="email" v-model="invoice.email" rules="required|email" required />
          </div>
       </div>
 
-      <div>
-        <div class="form-title">發票號碼</div>
+      <div class="w-flex w-flex-col w-justify-center">
+        <div class="form-title">
+          <div>發票號碼</div>
+          <ErrorMessage class="form-error" name="invoice_number" as="div"/>
+          </div>
         <div class="w-flex w-justify-center w-items-center form-row">
-        <input
+        <Field
           type="text"
           name="invoice_number"
           v-model="invoice.invoice_number"
+          :rules="{ regex: /^[a-zA-Z]{2}[0-9]{8}$/, required }"
           required
         />
         </div>
       </div>
 
-      <div>
+      <div class="w-flex w-flex-col w-justify-center">
           
-        <div class="form-title">發票日期</div>
-        <div class="w-flex w-justify-center w-items-center form-row">
-            <input
+        <div class="form-title">
+          <div>發票日期</div>
+          <ErrorMessage class="form-error" name="invoice_date" as="div"/>
+          </div>
+          <DatePicker class="w-flex w-justify-center w-items-center form-row" v-model="invoice.invoice_date" :model-config="{ type: 'string', mask: 'YYYY/MM/DD'}">
+            <template v-slot="{ inputValue, togglePopover }">
+           <Field
           type="text"
-          name="name"
+          name="invoice_date"
           v-model="invoice.invoice_date"
-          required
-        /></div>
+          :rules="{ regex: /^2021\/(10|11|12)\/[0-3]{1}[0-9]{1}$/, required }"
+           @click="togglePopover()"
+           :value="inputValue"
+          readonly required
+        />
+            </template>
+        </DatePicker>
       </div>
 
-      <div>
-        <div class="form-title">發票隨機碼</div>
+      <div class="w-flex w-flex-col w-justify-center">
+        <div class="form-title">
+          <div>發票隨機碼</div>
+          <ErrorMessage class="form-error" name="invoice_code" as="div"/>
+        </div>
         <div class="w-flex w-justify-center w-items-center form-row">
-        <input
+        <Field
           type="text"
           name="invoice_code"
           v-model="invoice.invoice_code"
+          rules="digits:4|required"
           required
         />
         </div>
       </div>
 
-      <div class="w-flex w-items-center">
-            <div class="form-box w-mt-8">
+      <div class="w-flex w-items-center <md:w-justify-center">
+            <div class="form-box md:w-mt-8">
                 <label>
-                <input
+                <Field
+                name="terms"
                 type="checkbox"
-                value="true"
+                value="1"
                 class="checkbox"
+                rules="required"
                 />
                 <span class="label-text">同意隱私權聲明以及活動規則辦法</span>
                 </label>
+                <ErrorMessage class="form-error" name="terms" />
             </div>
       </div>
-      <div class="w-col-span-2 w-flex w-items-center">
+      <div class="md:w-col-span-2 w-flex w-items-center <md:w-justify-center">
          <button 
             class="
             hover:(w-bg-white) 
             w-border-1 w-border-solid w-border-black
             w-bg-transparent
-            w-py-2 w-px-6 
             w-rounded-full 
-            w-text-2xl 
+            w-py-1 w-px-6 w-text-lg 
+            md:(w-py-2 w-text-2xl) 
             w-transition-all"
-            type="submit" :disabled="loading || invalid"
-            @click="submitCheck">送出資料</button>
+            type="submit"
+            :disabled="loading"
+           >送出資料</button>
+
+
+
       </div>
-    </form>
+
+      <p class="form-error" v-if="messages">{{messages.error}}</p>
+
+    </Form>
+             <button 
+            type="submit"
+            @click="submitInvoice">測試送出</button>
+    <pre>{{$data}} </pre>
   </div>
 </template>
+<script setup>
+import { configure, Field, Form, ErrorMessage, defineRule } from 'vee-validate';
+import { required, email, length, regex, digits } from '@vee-validate/rules';
+import { localize } from '@vee-validate/i18n';
+
+configure({
+  // Generates an English message locale generator
+  generateMessage: localize('zh_TW', {
+        "names": {
+          "products": '購買商品',
+          "referral": "從哪裡得知抽獎資訊",
+          "name": '姓名',
+          "phone": "手機號碼",
+          "email": 'E-mail',
+          "invoice_number": '發票號碼',
+          "invoice_date": '發票日期',
+          "invoice_code": '發票隨機碼',
+          "terms": '活動政策',
+          
+        },
+        "fields": {
+              "invoice_number": {
+                "regex" : '請填入正確10碼（範例: TT11223344）',
+              }
+            },
+        "messages": {
+          "digits": "須為 0:{length} 位數字",
+          "email": "須為有效的電子信箱",
+          "length": "{field}為必填",
+          "regex": "格式錯誤",
+          "required": "{field}為必填",
+            },
+  }),
+});
+
+defineRule('required', required);
+defineRule('email', email);
+defineRule('length', length);
+defineRule('regex', regex);
+defineRule('digits', digits);
+</script>
 <script>
 export default {
+  components: {
+    Field,
+    Form,
+    ErrorMessage,
+  },
   data: () => ({
     userinfo: [],
     products: [],
     invoice: {
-      cyb_id: "{{ customer.id  }}",
-      cyb_email: "{{ customer.email  }}",
       products: "",
       referral: "",
       name: "",
-      idcard: "",
       phone: "",
       email: "",
       invoice_number: "",
@@ -213,8 +328,82 @@ export default {
     },
     noLogin: false,
     loading: false,
-    errors: [],
+    messages: [],
+    formID:"AKfycbx10gDq67b-Wym9YK4KAgFG1Xe4Ps0ZYy-G-l7xkRsuQj54vFIJjG3jliJlyZsp6-6B"
   }),
+  methods:{
+      async GetUserInfo(){
+            // GET request using fetch with async/await
+            const userinfo = {};
+            const response = await this.axios.get("https://www.cloudflare.com/cdn-cgi/trace");
+            const resultArr = response.data.split('\n');
+              for(var i = 0, len = resultArr.length; i < len; i++)	{
+                var tempArr = resultArr[i].split('=');
+                userinfo[tempArr[0]] = tempArr[1];
+              }
+              this.userinfo = userinfo;
+      },
+       async submitInvoice(){
+
+          try{
+
+                this.loading = true
+                //等 recaptcha 載入
+                await this.$recaptchaLoaded()
+
+                //資料處理
+                const select_products = this.products.join(',')
+                this.invoice.userinfo = JSON.stringify(this.userinfo)
+                this.invoice.products = JSON.stringify(select_products).replaceAll('"', '')
+                this.invoice.userIP = this.userinfo.ip
+                
+                // 獲取recaptcha V3 token
+                const token = await this.$recaptcha('submit')
+                this.invoice.token = token
+
+            
+                const optionAxios = {headers: {
+                                'Content-Type': 'application/json',
+                                'Accept' : '*/*'
+                            }
+                        }
+          
+                const formData = new FormData()
+                Object.keys(this.invoice).forEach(key => {
+                  formData.append(key, this.invoice[key])
+                })
+                const parameter = {'parameter' : this.invoice}
+                
+                //送出表單
+                const response = await this.axios.post(`https://script.google.com/macros/s/${this.formID}/exec`, this.invoice)
+
+                if(response.data.result == 'error'){
+
+                  throw response.data // 產生例外
+
+                }
+
+                console.log(response)
+                this.loading = false
+
+
+
+
+
+          }catch(err){
+
+              this.messages = err
+              console.log('err!!',err)
+              this.loading = false
+
+          }
+            
+        },
+  },
+  mounted:function() {
+    this.GetUserInfo()
+  }
+
 };
 </script>
 <style scoped>
@@ -226,8 +415,8 @@ export default {
  @apply w-text-lg w-mb-1 w-flex w-justify-between;
 }
 .fm_invoice-form .form-row {
- height: 60px;
- @apply w-bg-white w-rounded-full w-py-2;
+ min-height: 60px;
+ @apply w-bg-white w-rounded-4xl w-py-2;
 }
 
 .fm_invoice-form .form-box{
@@ -273,6 +462,23 @@ export default {
 .fm_invoice-form input[type='text'],
 .fm_invoice-form input[type='email'] {
      @apply  w-p-0 w-h-full w-w-full w-mx-6 w-border-0 w-text-lg;
+}
+
+.fm_invoice-form .form-error{
+ @apply w-text-red-500 w-font-bold w-transition-all w-text-sm;
+}
+
+@media (max-width: 639.9px){
+
+    .fm_invoice-form .form-title {
+    @apply w-text-base;
+    }
+
+    .fm_invoice-form .label-text {
+        @apply  w-text-sm ;
+        line-height: 1.25rem;
+    }
+
 }
 
 </style>

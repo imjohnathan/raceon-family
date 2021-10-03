@@ -1,4 +1,26 @@
 {
+    "nav": [
+        {
+            "title" : "產品簡介",
+            "link" : "#sec1"
+        },
+        {
+            "title" : "使用時機",
+            "link" : "#sec2"
+        },
+        {
+            "title" : "好評推薦",
+            "link" : "#sec3"
+        },
+        {
+            "title" : "購買通路",
+            "link" : "#sec4"
+        },
+        {
+            "title" : "登錄發票",
+            "link" : "#sec5"
+        }
+    ],
     "products": [
         {
             "bg": true,
@@ -54,7 +76,7 @@
         {
             "slug": "lcs",
             "url": "/products/ors-sport-hydro",
-            "title": "水動能電解質液 (提升保水力)",
+            "title": "水動能電解質液—保水力",
             "slides": [
                 {
                     "title": "足夠電解質，身體保留水分的關鍵",
@@ -85,7 +107,7 @@
         {
             "slug": "vc",
             "url": "/products/reforce-vitamin-c",
-            "title": "環原力維生素C (修護力)",
+            "title": "環原力維生素C—修護力",
             "slides": [
                 {
                     "title": "抗氧化修護力，給勞累後的身體大掃除",
@@ -115,7 +137,7 @@
         {
             "slug": "dc",
             "url": "/products/double-caffeine",
-            "title": "雙速咖啡因雙層錠 (專注力）",
+            "title": "雙速咖啡因雙層錠—專注力",
             "slides": [
                 {
                     "title": "快速提高專注力，一錠還你清晰思緒",
@@ -153,7 +175,7 @@
             "favorites": [
                 {
                     "name": "爆汗１小時神補給包",
-                    "img": "fm_sec4_pr1.png",
+                    "img": "fm_pr1_sm.png",
                     "slug": "1"
                 }
             ]
@@ -166,7 +188,7 @@
             "favorites": [
                 {
                     "name": "爆汗１小時神補給包",
-                    "img": "fm_sec4_pr1.png",
+                    "img": "fm_pr1_sm.png",
                     "slug": "1"
                 }
             ]
@@ -179,7 +201,7 @@
             "favorites": [
                 {
                     "name": "爆汗１小時神補給包",
-                    "img": "fm_sec4_pr1.png",
+                    "img": "fm_pr1_sm.png",
                     "slug": "1"
                 }
             ]
@@ -192,7 +214,7 @@
             "favorites": [
                 {
                     "name": "耐力８小時神充電包",
-                    "img": "fm_sec4_pr3.png",
+                    "img": "fm_pr3_sm.png",
                     "slug": "3"
                 }
             ]
@@ -205,12 +227,12 @@
             "favorites": [
                 {
                     "name": "爆汗１小時神補給包",
-                    "img": "fm_sec4_pr1.png",
+                    "img": "fm_pr1_sm.png",
                     "slug": "1"
                 },
                 {
                     "name": "流汗６小時神補水包",
-                    "img": "fm_sec4_pr2.png",
+                    "img": "fm_pr2_sm.png",
                     "slug": "2"
                 }
             ]
@@ -223,7 +245,7 @@
             "favorites": [
                 {
                     "name": "爆汗１小時神補給包",
-                    "img": "fm_sec4_pr1.png",
+                    "img": "fm_pr1_sm.png",
                     "slug": "1"
                 }
             ]
@@ -294,8 +316,8 @@
             {
                 "title" : "活動時間",
                 "content" : [
-                    "發票有效時間：110/10/06(三) - 111/12/31 (五)",
-                    "發票登錄時間：110/10/06(三) - 111/01/03 23:59(一)"
+                    "發票有效時間：<br class=\"sm:w-hidden\">110/10/06(三) - 110/12/31 (五)",
+                    "發票登錄時間：<br class=\"sm:w-hidden\">110/10/06(三) - 111/01/03 23:59(一)"
                 ]
             },
             {
@@ -314,7 +336,7 @@
                 "title" : "活動獎項",
                 "content" : [
                     "頭獎：Apple Watch 6 40mm GPS，1組/月（共三組），市價$12,900",
-                    "貳獎：AIVÍA艾微漾 皙漾光微針淡斑貼片禮盒，2組/月（共六組），市價$3,980",
+                    "貳獎：Garmin vívosmart 4，1組/月（共三組），市價$3,880",
                     "獎品之樣式為隨機出貨，恕無法指定。"
                 ]
             }

@@ -7,36 +7,23 @@
                 w-list-none
                 w-m-0
                 w-p-0
-                w-text-xl
+                w-text-base
+                sm:w-text-xl
                 w-text-white
                 w-italic
-                w-py-6
+                w-py-4
+                sm:w-py-6
                 w-font-medium
+                w-whitespace-nowrap
+                <sm:w-overflow-auto
             "
             >
-            <li class="w-inline-block">
-                <a class="w-text-white w-px-4 w-py-6 hover:w-text-gray-400" href="#"
-                >產品簡介</a
-                >
-            </li>
-            <li class="w-inline-block">
-                <a class="w-text-white w-px-4 w-py-6 hover:w-text-gray-400" href="#"
-                >使用時機</a
-                >
-            </li>
-            <li class="w-inline-block">
-                <a class="w-text-white w-px-4 w-py-6 hover:w-text-gray-400" href="#"
-                >好評推薦</a
-                >
-            </li>
-            <li class="w-inline-block">
-                <a class="w-text-white w-px-4 w-py-6 hover:w-text-gray-400" href="#"
-                >購買通路</a
-                >
-            </li>
-            <li class="w-inline-block">
-                <a class="w-text-white w-px-4 w-py-6 hover:w-text-gray-400" href="#"
-                >登錄發票</a
+
+            <li v-for="nav in navs" :key="nav" class="w-inline-block">
+                <a 
+                class="w-text-white w-px-2 w-py-3 sm:(w-px-4 w-py-6) hover:w-text-gray-400" 
+                :href="nav.link"
+                >{{nav.title}}</a
                 >
             </li>
             </ul>
@@ -44,9 +31,16 @@
         </nav>
     </div>
 </template>
+<script setup>
+//Data
+import DB from "../db/db.json";
+
+</script>
 <script>
 export default {
-    
+  data: () => ({
+      navs : DB.nav
+  }),
 }
 </script>
 <style lang="">
