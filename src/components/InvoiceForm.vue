@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Form class="fm_invoice-form w-grid w-gap-y-4 md:(w-grid-cols-2 w-gap-y-4 w-gap-x-10)" @submit="submitInvoice">
+    <Form class="fm_invoice-form w-grid w-gap-y-4 md:(w-grid-cols-2 w-gap-y-4 w-gap-x-10)"
+    v-slot="{ isSubmitting, meta }"
+     @submit="submitInvoice">
 
       <div class="md:w-col-span-2 w-flex w-flex-col w-justify-center">
         <div class="form-title">
@@ -169,7 +171,7 @@
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>發票號碼</div>
+          <div>發票號碼<small>（範例: TT11223344）</small></div>
           <ErrorMessage class="form-error" name="invoice_number" as="div"/>
           </div>
         <div class="w-flex w-justify-center w-items-center form-row">
@@ -177,7 +179,9 @@
           type="text"
           name="invoice_number"
           v-model="invoice.invoice_number"
-          :rules="{ regex: /^[a-zA-Z]{2}[0-9]{8}$/, required }"
+          :rules="{ regex: /^[A-Z]{2}[0-9]{8}$/, required }"
+          :value="invoice.invoice_number.toUpperCase()"
+          @input="invoice.invoice_number = $event.target.value.toUpperCase()"
           required
         />
         </div>
@@ -235,10 +239,9 @@
                 <ErrorMessage class="form-error" name="terms" />
             </div>
       </div>
-      <div class="md:w-col-span-2 w-flex w-items-center <md:w-justify-center">
+      <div class="md:w-col-span-2 w-flex w-items-center <md:(w-justify-center w-flex-col)">
          <button 
             class="
-            hover:(w-bg-white) 
             w-border-1 w-border-solid w-border-black
             w-bg-transparent
             w-rounded-full 
@@ -246,14 +249,24 @@
             md:(w-py-2 w-text-2xl) 
             w-transition-all"
             type="submit"
-            :disabled="loading"
+
+            :class="
+            {'w-animate-pulse' : isSubmitting,
+            '!w-bg-white w-cursor-not-allowed' : isSubmitting||!meta.valid,
+            'hover:(w-bg-white) w-animate-none' : !isSubmitting||meta.valid
+            }
+            "
+            :disabled="isSubmitting||!meta.valid"
            >送出資料</button>
-
-
+      <div 
+      class="w-ml-6 w-transition-all w-duration-500 <md:w-mt-6"
+      :class="{
+        'w-opacity-0' : !messages.lenth,  
+        'w-text-red-500 w-font-bold w-opacity-100' : messages.result == 'error',  
+        'w-text-green-500 w-font-bold w-opacity-100' : messages.result == 'success'}" 
+      v-show="messages">{{messages.msg}}</div>
 
       </div>
-
-      <p class="form-error" v-if="messages">{{messages.error}}</p>
 
     </Form>
              <button 
@@ -329,7 +342,7 @@ export default {
     noLogin: false,
     loading: false,
     messages: [],
-    formID:"AKfycbx10gDq67b-Wym9YK4KAgFG1Xe4Ps0ZYy-G-l7xkRsuQj54vFIJjG3jliJlyZsp6-6B"
+    formID:"AKfycbxx6GorDN-3CnZFCH193jinDAXMwB5PXMQfHgGdJA4WzpRAahKtvqmQKpdCF3rPnh6N"
   }),
   methods:{
       async GetUserInfo(){
@@ -346,7 +359,7 @@ export default {
        async submitInvoice(){
 
           try{
-
+                this.messages = [] //清空訊息
                 this.loading = true
                 //等 recaptcha 載入
                 await this.$recaptchaLoaded()
@@ -363,39 +376,38 @@ export default {
 
             
                 const optionAxios = {headers: {
-                                'Content-Type': 'application/json',
+                                'Content-Type': 'application/x-www-form-urlencoded',
                                 'Accept' : '*/*'
                             }
                         }
-          
+                /*
                 const formData = new FormData()
                 Object.keys(this.invoice).forEach(key => {
                   formData.append(key, this.invoice[key])
                 })
                 const parameter = {'parameter' : this.invoice}
-                
+                */
+               
                 //送出表單
-                const response = await this.axios.post(`https://script.google.com/macros/s/${this.formID}/exec`, this.invoice)
-
+                const response = await this.axios.post(`https://script.google.com/macros/s/${this.formID}/exec`, this.invoice, optionAxios)
+                 console.log(response)
+                 this.loading = false    
+                 this.invoice.products = '';
+                 this.invoice.token = '';
                 if(response.data.result == 'error'){
-
                   throw response.data // 產生例外
-
                 }
-
-                console.log(response)
-                this.loading = false
-
-
-
+                //成功送出
+                this.products = []
+                this.invoice.invoice_number = ''
+                this.invoice.invoice_code = ''
+                this.invoice.invoice_date = ''
+                this.messages = {'result' : 'success', msg: '資料成功送出！'} ;
 
 
           }catch(err){
-
               this.messages = err
-              console.log('err!!',err)
               this.loading = false
-
           }
             
         },
@@ -465,7 +477,8 @@ export default {
 }
 
 .fm_invoice-form .form-error{
- @apply w-text-red-500 w-font-bold w-transition-all w-text-sm;
+  font-size: 12px;
+ @apply w-text-red-500 w-font-bold w-transition-all;
 }
 
 @media (max-width: 639.9px){

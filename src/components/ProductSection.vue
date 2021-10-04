@@ -45,7 +45,7 @@
                   <h3 class="w-text-lg sm:w-text-2xl w-font-normal">{{prSubtitle}}</h3>
                 </div>
                 <div class="w-mb-2 w-text-sm sm:w-text-lg <sm:(w-text-center w-my-4)">
-                  定價：<del>${{prPrice}}</del>&emsp;&emsp;新品優惠價：${{prPromoprice}}
+                  定價：<span :class="{ 'w-line-through' : prPromoprice }">${{prPrice}}</span><template v-if="prPromoprice">&emsp;&emsp;新品優惠價：${{prPromoprice}}</template>
                   </div>
                 </div>
               <div class="w-flex sm:w-mb-20 w-border-0 w-border-b-1 w-border-t-1 w-border-solid">

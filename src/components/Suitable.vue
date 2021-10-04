@@ -8,7 +8,7 @@
        <template v-for="(act,key) in activities" :key="act" >
         <div 
         class="<sm:(w-flex-shrink-0) suite-width w-px-8 w-py-6 w-bg-white w-rounded-5xl w-flex w-flex-col">
-            <h2 class="w-text-center w-bg-[#b8daea] w-py-2 w-rounded-4xl w-font-normal w-text-xl sm:w-text-2xl">戶外運動</h2>
+            <h2 class="w-text-center w-bg-[#b8daea] w-py-2 w-rounded-4xl w-font-normal w-text-xl sm:w-text-2xl">{{act.name}}</h2>
             <div class="w-flex-1">
                 <!--icon+說明-->
                     <!--icon-->

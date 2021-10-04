@@ -1,63 +1,63 @@
 
 <template>
   <main class="family-series w-min-h-screen">
-    <section>
+    <section class="w-relative">
       <KV />
-    </section>
-
-    <section>
       <Navbar />
     </section>
 
-    <section id="sec1">
+    <section>
       <BreifVideo :video="youtube" />
     </section>
 
-    <section id="sec2">
-      <Title title="產品組合"/>
-      <template v-for="product in products" :key="product">
-        <ProductSection
-          :pr-bg="product.bg"
-          :pr-id="product.id"
-          :pr-tags="product.tags"
-          :pr-title="product.title"
-          :pr-subtitle="product.subtitle"
-          :pr-price="product.price"
-          :pr-promoprice="product.promoprice"
-          :pr-insides="product.insides"
-        />
-      </template>
-    </section>
+    <div v-scroll-spy="{offset: 80,allowNoActive: true}">
 
-    <section id="sec3">
-      <Title title="內容物說明" />
-    <SamllProductsSection />
-    </section>
 
-    <section id="sec4">
-      <Title title="好評推薦" />
-    <Testimonies />
-    </section>
+        <section>
+          <Title title="產品組合"/>
+          <template v-for="product in products" :key="product">
+            <ProductSection
+              :pr-bg="product.bg"
+              :pr-id="product.id"
+              :pr-tags="product.tags"
+              :pr-title="product.title"
+              :pr-subtitle="product.subtitle"
+              :pr-price="product.price"
+              :pr-promoprice="product.promoprice"
+              :pr-insides="product.insides"
+            />
+          </template>
+          <Title title="內容物說明" />
+        <SamllProductsSection />
+        </section>
+ 
 
-    <section id="sec5">
-      <Title title="適用族群" />
-    <Suitable />
-    </section>
+      <section>
+        <Title title="好評推薦" />
+      <Testimonies />
+      </section>
 
-    <section id="sec6">
-      <Title title="使用時機" />
-    <Timing />
-    </section>
 
-    <section id="sec7">
-      <Title title="購買通路" />
-    <SalesVendor />
-    </section>
+        <section>
+        <Title title="適用族群" />
+        <Suitable />
 
-    <section id="sec8">
-      <Title title="發票登錄抽獎活動" />
-      <Invoice />
-    </section>
+        <Title title="使用時機" />
+        <Timing />
+        </section>
+
+
+      <section id="sec7">
+        <Title title="購買通路" />
+      <SalesVendor />
+      </section>
+
+      <section id="sec8">
+        <Title title="發票登錄抽獎活動" />
+        <Invoice />
+      </section>
+
+    </div>
 
     <section class="w-bg-black">
       <div class="w-container w-mx-auto w-py-30 w-flex w-justify-center w-items-center">

@@ -11,9 +11,12 @@ import { SetupCalendar, Calendar, DatePicker } from 'v-calendar';
 
 import { VueReCaptcha } from 'vue-recaptcha-v3'
 
-createApp(App)
+import { registerScrollSpy } from 'vue3-scroll-spy'
+
+
+const app = createApp(App)
 .mixin(getImg)
-.use(VueSmoothScroll)
+.use(VueSmoothScroll,{updateHistory: false, offset: -80,})
 .use(VueAxios, axios)
 
 // Setup the plugin with optional defaults
@@ -24,4 +27,6 @@ createApp(App)
 
 .use(VueReCaptcha, { siteKey: '6LfjNnIcAAAAAHELMJw_nXOebz0NZhIYmybdXKH1' })
 
-.mount('#app')
+registerScrollSpy(app)
+
+app.mount('#app')
