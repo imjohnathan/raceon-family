@@ -23,7 +23,7 @@
                 value="爆汗１小時神補給包"
                 v-model="products"
                 class="checkbox"
-                rules="length:1"
+                rules="checkbox"
                 />
                 <span class="label-text">爆汗１小時神補給包</span>
                 </label>
@@ -36,7 +36,7 @@
                 value="流汗６小時神捕水包"
                 v-model="products"
                 class="checkbox"
-                rules="length:1"
+                rules="checkbox"
                 />
                 <span class="label-text">流汗６小時神捕水包</span>
                 </label>
@@ -49,7 +49,7 @@
                 value="耐力８小時神充電包"
                 v-model="products"
                 class="checkbox"
-                rules="length:1"
+                rules="checkbox"
                 />
                 <span class="label-text">耐力８小時神充電包</span>
                 </label>
@@ -136,7 +136,7 @@
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>姓名</div>
+          <div>真實姓名</div>
           <ErrorMessage class="form-error" name="name" as="div"/>
           </div>
         <div class="w-flex w-justify-center w-items-center form-row">
@@ -146,10 +146,26 @@
         </div>
       </div>
 
+<!----
+       <Field class="w-flex w-flex-col w-justify-center" 
+       name="name" 
+       v-model="invoice.name" 
+       rules="required"
+       as="div" v-slot="{ field, meta }">
+        <div class="form-title">
+          <div>姓名</div>
+          <ErrorMessage class="form-error" name="name" as="div"/>
+          </div>
+        <div class="w-flex w-justify-center w-items-center form-row" :class="{'!w-bg-red-300': !meta.valid  }">
+            <input 
+            type="text"  required v-bind="field" :class="{'!w-bg-red-300': !meta.valid  }">
+        </div>
+      </Field>
+---->
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>手機號碼</div>
+          <div>手機號碼<small>（範例: 09XXXXXXXX）</small></div>
           <ErrorMessage class="form-error" name="phone" as="div"/>
           </div>
         <div class="w-flex w-justify-center w-items-center form-row">
@@ -190,10 +206,16 @@
       <div class="w-flex w-flex-col w-justify-center">
           
         <div class="form-title">
-          <div>發票日期</div>
+          <div>發票日期<small>（僅接受活動日期內）</small></div>
           <ErrorMessage class="form-error" name="invoice_date" as="div"/>
           </div>
-          <DatePicker class="w-flex w-justify-center w-items-center form-row" v-model="invoice.invoice_date" :model-config="{ type: 'string', mask: 'YYYY/MM/DD'}">
+          <DatePicker class="w-flex w-justify-center w-items-center form-row" 
+          v-model="invoice.invoice_date" 
+          :model-config="{ type: 'string', mask: 'YYYY/MM/DD'}"
+            :available-dates='{
+                start: new Date(2021, 9, 6),
+                end: new Date(2022, 0, 0)
+            }'>
             <template v-slot="{ inputValue, togglePopover }">
            <Field
           type="text"
@@ -210,7 +232,7 @@
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>發票隨機碼</div>
+          <div>發票隨機碼<small>（範例: 1688）</small></div>
           <ErrorMessage class="form-error" name="invoice_code" as="div"/>
         </div>
         <div class="w-flex w-justify-center w-items-center form-row">
@@ -245,18 +267,17 @@
             w-border-1 w-border-solid w-border-black
             w-bg-transparent
             w-rounded-full 
-            w-py-1 w-px-6 w-text-lg 
-            md:(w-py-2 w-text-2xl) 
+            w-py-1 w-px-6 w-text-2xl w-mt-4
+            md:(w-py-2) 
             w-transition-all"
             type="submit"
 
             :class="
-            {'w-animate-pulse' : isSubmitting,
-            '!w-bg-white w-cursor-not-allowed' : isSubmitting||!meta.valid,
-            'hover:(w-bg-white) w-animate-none' : !isSubmitting||meta.valid
+            {'!w-bg-white w-cursor-not-allowed w-animate-pulse' : isSubmitting,
+            'hover:(w-bg-white) w-animate-none' : !isSubmitting
             }
             "
-            :disabled="isSubmitting||!meta.valid"
+            :disabled="isSubmitting"
            >送出資料</button>
       <div 
       class="w-ml-6 w-transition-all w-duration-500 <md:w-mt-6"
@@ -269,16 +290,18 @@
       </div>
 
     </Form>
-             <button 
+    <!-- <button 
             type="submit"
             @click="submitInvoice">測試送出</button>
-    <pre>{{$data}} </pre>
+    <pre>{{$data}} </pre> -->
   </div>
 </template>
 <script setup>
 import { configure, Field, Form, ErrorMessage, defineRule } from 'vee-validate';
-import { required, email, length, regex, digits } from '@vee-validate/rules';
+import { required, email, regex, digits } from '@vee-validate/rules';
 import { localize } from '@vee-validate/i18n';
+import { DatePicker } from 'v-calendar';
+
 
 configure({
   // Generates an English message locale generator
@@ -296,14 +319,13 @@ configure({
           
         },
         "fields": {
-              "invoice_number": {
-                "regex" : '請填入正確10碼（範例: TT11223344）',
+              "invoice_date": {
+                "regex" : '日期不在活動範圍內',
               }
             },
         "messages": {
           "digits": "須為 0:{length} 位數字",
           "email": "須為有效的電子信箱",
-          "length": "{field}為必填",
           "regex": "格式錯誤",
           "required": "{field}為必填",
             },
@@ -312,9 +334,18 @@ configure({
 
 defineRule('required', required);
 defineRule('email', email);
-defineRule('length', length);
 defineRule('regex', regex);
 defineRule('digits', digits);
+
+defineRule('checkbox', value => {
+
+    if (value && value.length) {
+    return true;
+    }
+
+  return '需至少選擇一項產品';
+});
+
 </script>
 <script>
 export default {
@@ -322,6 +353,7 @@ export default {
     Field,
     Form,
     ErrorMessage,
+    DatePicker,
   },
   data: () => ({
     userinfo: [],
@@ -402,7 +434,7 @@ export default {
                 this.invoice.invoice_number = ''
                 this.invoice.invoice_code = ''
                 this.invoice.invoice_date = ''
-                this.messages = {'result' : 'success', msg: '資料成功送出！'} ;
+                this.messages = {'result' : 'success', msg: '資料成功送出！若有多張發票請繼續登錄。'} ;
 
 
           }catch(err){

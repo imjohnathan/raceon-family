@@ -15,18 +15,7 @@
 
         <section>
           <Title title="產品組合"/>
-          <template v-for="product in products" :key="product">
-            <ProductSection
-              :pr-bg="product.bg"
-              :pr-id="product.id"
-              :pr-tags="product.tags"
-              :pr-title="product.title"
-              :pr-subtitle="product.subtitle"
-              :pr-price="product.price"
-              :pr-promoprice="product.promoprice"
-              :pr-insides="product.insides"
-            />
-          </template>
+            <ProductSection />
           <Title title="內容物說明" />
         <SamllProductsSection />
         </section>
@@ -80,9 +69,6 @@ import Suitable from "./components/Suitable.vue";
 import Timing from "./components/Timing.vue";
 import SalesVendor from "./components/SalesVendor.vue";
 import Invoice from "./components/Invoice.vue";
-//Data
-import DB from "./db/db.json";
-
 </script>
 
 <script>
@@ -102,7 +88,6 @@ export default {
   },
   data: function () {
     return {
-      products: DB.products,
       youtube: '',
       google: ''
     };
@@ -117,10 +102,12 @@ export default {
 .site-page{
   padding-bottom: 0 ;
 }
+/*
 .family-series svg:not(:root) {
     width:100%;
     height: auto;
 }
+*/
 .footer-nav{
   display: none;
 }
