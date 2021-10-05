@@ -4,18 +4,18 @@
         <div class="sm:(w-grid w-grid-cols-22) w-max-w-screen-xl w-mx-auto">
             <div class="sm:w-col-span-10 w-flex w-flex-col w-bg-[#b4cedd] sm:w-px-6 w-pt-10"><!--前-->
                 <div class="w-flex w-justify-center w-pb-6"><!--標題-->
-                <h2 class="timeing-title">行程前</h2>
+                <h2 class="timeing-title">行程、前</h2>
                 </div>
 
                 <div class="w-flex w-flex-1 w-text-center <sm:w-px-4"><!--產品-->
                     <div class="w-grid w-grid-cols-2">
                         <div class="w-pr-3 sm:w-pr-6 w-border-0 w-border-r-1 w-border-solid w-border-black">
                             <h3 class="w-text-lg sm:w-text-2xl w-font-normal w-whitespace-nowrap">水動能電解質液</h3>
-                            <p class="sm:(w-text-base w-leading-7) w-m-0">每包以250ml冷水或溫水沖泡，於行程前30分鐘開始飲用。</p>
+                            <p class="sm:(w-text-base w-leading-7) w-m-0">每包以250ml冷水或溫水沖泡，於行程、運動前30分鐘開始飲用。</p>
                         </div>
                         <div class="w-pl-3 sm:w-pl-6">
                             <h3 class="w-text-lg sm:w-text-2xl w-font-normal w-whitespace-nowrap">雙速咖啡因雙層錠</h3>
-                            <p class="sm:(w-text-base w-leading-7) w-m-0">運動前30-60分鐘補充，每次1錠，直接配水吞服。每錠最長維持8小時。</p>
+                            <p class="sm:(w-text-base w-leading-7) w-m-0">行程、運動前30-60分鐘補充，每次1錠，直接配水吞服，不建議咬碎。每錠最長維持8小時。</p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="w-flex w-flex-1 w-text-center <sm:w-px-4"><!--產品-->
                     <div>
                         <h3 class="w-text-lg sm:w-text-2xl w-font-normal w-whitespace-nowrap">環原力維生素C</h3>
-                        <p class="sm:(w-text-base w-leading-7) w-m-0">運動、行程後或日常使用，每包以200-400ml水，可依照個人口感調整水量。</p>
+                        <p class="sm:(w-text-base w-leading-7) w-m-0">行程、運動後或日常使用，每包以200-400ml水，可依照個人口感調整水量。</p>
                     </div>
                 </div>
 

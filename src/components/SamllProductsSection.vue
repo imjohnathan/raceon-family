@@ -20,8 +20,8 @@
                     <div class="sm:w-w-3/5 <sm:w-order-last w-flex w-flex-col w-justify-center w-p-10 sm:w-p-20">
                         <div>
                         <!--文字內容-->
-                        <h2 v-if="key == 0" v-html="product.title" class="sm:w-mb-8 <sm:(w-text-xl w-text-center)"></h2>
-                        <h4 class="<sm:(w-text-base w-text-center)">{{ slide.title }}</h4>
+                        <h2 v-if="key == 0" v-html="product.title" class="sm:w-mb-8 <sm:(w-text-xl w-text-center) w-font-bold"></h2>
+                        <h4 class="<sm:(w-text-base w-text-center) w-font-bold w-whitespace-nowrap">{{ slide.title }}</h4>
                             <p 
                             v-for="(p,key) in slide.paragragh" :key="p"
                             v-html="p" 
@@ -39,6 +39,7 @@
                                 w-rounded-full
                                 hover:w-bg-white
                             "
+                            target="_blank"
                             :href="product.url"
                             >瞭解更多</a
                             >
@@ -49,8 +50,12 @@
                         <!--圖片-->
                         <div class="w-aspect-w-4 w-aspect-h-3 sm:(w-aspect-w-1 w-aspect-h-1.3)">
                         <img
-                        class="w-object-cover"
-                        :src="getSrc(slide.image)"
+                        class="w-object-cover <sm:w-hidden"
+                        :src="getSrc(`${slide.image}.jpg`)"
+                        />
+                        <img
+                        class="w-object-cover sm:w-hidden"
+                        :src="getSrc(`${slide.image}_m.jpg`)"
                         />
                         </div>
                     </div>

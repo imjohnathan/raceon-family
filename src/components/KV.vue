@@ -38,7 +38,7 @@
                     w-whitespace-nowrap 
                     w-m-0 w-font-bold"
                   >
-                    登錄發票月月抽<br />Apple Watch 7、<br class="sm:w-hidden" />vívosmart 4
+                    登錄發票月月抽<br />Apple Watch 7、<br class="sm:w-hidden" />Garmin 運動手環
                   </h2>
                 </div>
 

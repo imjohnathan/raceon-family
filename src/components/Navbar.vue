@@ -8,7 +8,7 @@
                 w-list-none
                 w-m-0
                 w-p-0
-                <sm:(w-overflow-auto w-space-x-2)
+                <sm:(w-overflow-auto w-space-x-2 w-py-2)
                 w-py-4
                 w-flex
                 w-space-x-6
@@ -78,7 +78,20 @@
                         >
                     </li>
                     </ul>
-                    <div class="sm:w-hidden">
+                    <div class="sm:w-hidden w-flex w-space-x-4">
+                    <a 
+                    href="#invoice"
+                    class="
+                    hover:(w-bg-white !w-text-black)
+                    w-border-1 w-border-solid w-border-white !w-text-white
+                    w-inline-block 
+                    w-text-sm
+                    w-px-3 w-py-1
+                    w-rounded-full
+                    w-transition-all 
+                    w-font-medium
+                    w-cursor-pointer
+                    " v-smooth-scroll>立即登錄</a>
                     <span @click="menu = true" class="fm-toggle-nav" ><span class="fm-icon-nav"></span></span>
                     </div>
                 </div>
@@ -95,7 +108,7 @@
         leave-to-class="w-transform w-opacity-0 w--translate-y-full"
     >
         <div @click.stop.prevent v-show="menu"  class="w-fixed w-w-full w-z-9997 w-top-0">
-            <div class="w-container w-bg-black w-border-light-900 w-bg-opacity-80 w-backdrop-filter w-backdrop-saturate-[180%] w-backdrop-blur-xl">
+            <div class=" w-bg-black w-border-light-900 w-bg-opacity-80 w-backdrop-filter w-backdrop-saturate-[180%] w-backdrop-blur-xl">
                     <nav class="w-flex w-flex-col w-justify-center w-items-center w-py-6" v-scroll-spy-link>
                         <a v-for="nav in navs" :key="nav"
                         @click="menu=false" 

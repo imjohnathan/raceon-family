@@ -1,7 +1,7 @@
 <template>
   <div>
     <Form class="fm_invoice-form w-grid w-gap-y-4 md:(w-grid-cols-2 w-gap-y-4 w-gap-x-10)"
-    v-slot="{ isSubmitting, meta }"
+    v-slot="{ isSubmitting, errors }"
      @submit="submitInvoice">
 
       <div class="md:w-col-span-2 w-flex w-flex-col w-justify-center">
@@ -9,12 +9,15 @@
             <div>購買商品</div>
             <ErrorMessage class="form-error" name="products" as="div"/>
             </div>
-         <div class="
+         <div 
+         :class="{ '!w-bg-red-100' : errors.products }"
+         class="
+         w-transition-all
          w-flex 
          w-justify-between
          md:w-items-center
          <md:(w-flex-col w-items-start) 
-         w-px-8 form-row">
+         w-px-8 <md:w-py-2 form-row">
             <div class="form-box">
                 <label>
                 <Field
@@ -61,11 +64,14 @@
         <div class="form-title">
           <div>從哪裡得知抽獎資訊</div>
           <ErrorMessage class="form-error" name="referral" as="div"/></div>
-         <div class="
+         <div 
+         :class="{ '!w-bg-red-100' : errors.referral }"
+         class="
+         w-transition-all
          w-flex 
         w-flex-wrap w-items-start
          md:(w-items-center w-justify-between)
-         w-px-8 form-row">
+         w-px-8 <md:w-py-2 form-row">
              <div class="form-box">
                 <label>
                 <Field
@@ -136,11 +142,16 @@
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>真實姓名</div>
+          <div>姓名</div>
           <ErrorMessage class="form-error" name="name" as="div"/>
           </div>
-        <div class="w-flex w-justify-center w-items-center form-row">
+        <div 
+        :class="{ '!w-bg-red-100' : errors.name }"
+        class="w-transition-all w-flex w-justify-center w-items-center form-row">
             <Field 
+            :class="{ '!w-bg-red-100' : errors.name }"
+            class="w-transition-all"
+            placeholder="與身分證相同之姓名，需與領獎人一致"
             type="text" name="name" v-model="invoice.name" 
             rules="required" required />
         </div>
@@ -165,11 +176,16 @@
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>手機號碼<small>（範例: 09XXXXXXXX）</small></div>
+          <div>手機號碼</div>
           <ErrorMessage class="form-error" name="phone" as="div"/>
           </div>
-        <div class="w-flex w-justify-center w-items-center form-row">
+        <div 
+        :class="{ '!w-bg-red-100' : errors.phone }"
+        class="w-transition-all w-flex w-justify-center w-items-center form-row">
             <Field type="text" name="phone" v-model="invoice.phone" 
+            :class="{ '!w-bg-red-100' : errors.phone }"
+            class="w-transition-all"
+            placeholder="請輸入正確手機號碼，範例: 09XXXXXXXX"
             :rules="{ regex: /^09[0-9]{8}$/, required }"
             required />
             </div>
@@ -180,20 +196,31 @@
            <div>Email</div>
            <ErrorMessage class="form-error" name="email" as="div"/>
            </div>
-         <div class="w-flex w-justify-center w-items-center form-row">
-        <Field type="email" name="email" v-model="invoice.email" rules="required|email" required />
+         <div 
+         :class="{ '!w-bg-red-100' : errors.email }"
+         class="w-transition-all w-flex w-justify-center w-items-center form-row">
+        <Field type="email" 
+        :class="{ '!w-bg-red-100' : errors.email }"
+        class="w-transition-all"
+        placeholder="請輸入有效Email，中獎將寄送通知到此Email"
+        name="email" v-model="invoice.email" rules="required|email" required />
          </div>
       </div>
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>發票號碼<small>（範例: TT11223344）</small></div>
+          <div>發票號碼</div>
           <ErrorMessage class="form-error" name="invoice_number" as="div"/>
           </div>
-        <div class="w-flex w-justify-center w-items-center form-row">
+        <div 
+        :class="{ '!w-bg-red-100' : errors.invoice_number }"
+        class="w-transition-all w-flex w-justify-center w-items-center form-row">
         <Field
+          :class="{ '!w-bg-red-100' : errors.invoice_number }"
+          class="w-transition-all"
           type="text"
           name="invoice_number"
+          placeholder="英文加數字共10碼，範例: RO16816816"
           v-model="invoice.invoice_number"
           :rules="{ regex: /^[A-Z]{2}[0-9]{8}$/, required }"
           :value="invoice.invoice_number.toUpperCase()"
@@ -206,18 +233,23 @@
       <div class="w-flex w-flex-col w-justify-center">
           
         <div class="form-title">
-          <div>發票日期<small>（僅接受活動日期內）</small></div>
+          <div>發票日期</div>
           <ErrorMessage class="form-error" name="invoice_date" as="div"/>
           </div>
-          <DatePicker class="w-flex w-justify-center w-items-center form-row" 
+          <DatePicker 
+          :class="{ '!w-bg-red-100' : errors.invoice_date }" 
+          class="w-transition-all w-flex w-justify-center w-items-center form-row" 
           v-model="invoice.invoice_date" 
           :model-config="{ type: 'string', mask: 'YYYY/MM/DD'}"
             :available-dates='{
-                start: new Date(2021, 9, 6),
+                start: new Date(2021, 9, 5),
                 end: new Date(2022, 0, 0)
             }'>
             <template v-slot="{ inputValue, togglePopover }">
            <Field
+          :class="{ '!w-bg-red-100' : errors.invoice_date }" 
+          class="w-transition-all"
+          placeholder="僅接受活動日期內的發票"
           type="text"
           name="invoice_date"
           v-model="invoice.invoice_date"
@@ -232,11 +264,16 @@
 
       <div class="w-flex w-flex-col w-justify-center">
         <div class="form-title">
-          <div>發票隨機碼<small>（範例: 1688）</small></div>
+          <div>發票隨機碼</div>
           <ErrorMessage class="form-error" name="invoice_code" as="div"/>
         </div>
-        <div class="w-flex w-justify-center w-items-center form-row">
+        <div 
+        :class="{ '!w-bg-red-100' : errors.invoice_code }" 
+        class="w-transition-all w-flex w-justify-center w-items-center form-row">
         <Field
+          :class="{ '!w-bg-red-100' : errors.invoice_code }" 
+          class="w-transition-all"
+          placeholder="共4碼數字，範例: 1688"
           type="text"
           name="invoice_code"
           v-model="invoice.invoice_code"
@@ -261,13 +298,13 @@
                 <ErrorMessage class="form-error" name="terms" />
             </div>
       </div>
-      <div class="md:w-col-span-2 w-flex w-items-center <md:(w-justify-center w-flex-col)">
+      <div class="md:w-col-span-2 w-flex w-items-center <md:(w-justify-center w-flex-col w-space-y-4) w-mt-4 md:w-space-x-4">
          <button 
             class="
             w-border-1 w-border-solid w-border-black
             w-bg-transparent
             w-rounded-full 
-            w-py-1 w-px-6 w-text-2xl w-mt-4
+            w-py-1 w-px-6 w-text-2xl
             md:(w-py-2) 
             w-transition-all"
             type="submit"
@@ -277,18 +314,21 @@
             'hover:(w-bg-white) w-animate-none' : !isSubmitting
             }
             "
+            @click="messages = []"
             :disabled="isSubmitting"
            >送出資料</button>
+         <div>
+             <i v-show="isSubmitting" class="gg-spinner"></i>
+             </div>
+
       <div 
-      class="w-ml-6 w-transition-all w-duration-500 <md:w-mt-6"
+      class="w-font-bold"
       :class="{
-        'w-opacity-0' : !messages.lenth,  
-        'w-text-red-500 w-font-bold w-opacity-100' : messages.result == 'error',  
-        'w-text-green-500 w-font-bold w-opacity-100' : messages.result == 'success'}" 
-      v-show="messages">{{messages.msg}}</div>
+        'w-text-red-500' : messages.result == 'error' || Object.keys(errors).length,  
+        'w-text-green-500' : messages.result == 'success'}" 
+      v-show="messages||Object.keys(errors).length">{{messages.msg}}<span v-if="Object.keys(errors).length">表單有錯誤，請確認。</span></div>
 
       </div>
-
     </Form>
     <!-- <button 
             type="submit"
@@ -321,6 +361,9 @@ configure({
         "fields": {
               "invoice_date": {
                 "regex" : '日期不在活動範圍內',
+              },
+              "terms": {
+                "required" : '需同意活動政策才可參與',
               }
             },
         "messages": {
@@ -374,7 +417,7 @@ export default {
     noLogin: false,
     loading: false,
     messages: [],
-    formID:"AKfycbxx6GorDN-3CnZFCH193jinDAXMwB5PXMQfHgGdJA4WzpRAahKtvqmQKpdCF3rPnh6N"
+    formID:"AKfycbzSsqZhEq1FzmgyXL8dTadbiNRCNjk6qH0dfs-ekg1gBZuSB-qAzKlXL2vgfT8wwgAf"
   }),
   methods:{
       async GetUserInfo(){
@@ -446,8 +489,13 @@ export default {
   },
   mounted:function() {
     this.GetUserInfo()
-  }
+  },
+  beforeMount: function() {
+    if (typeof fm_data.formID !== 'undefined') {
+        this.formID = fm_data.formID;
+    }
 
+  }  
 };
 </script>
 <style scoped>
@@ -456,11 +504,11 @@ export default {
 }
 
 .fm_invoice-form .form-title {
- @apply w-text-lg w-mb-1 w-flex w-justify-between;
+ @apply w-text-base w-mb-1 w-flex w-justify-between;
 }
 .fm_invoice-form .form-row {
- min-height: 60px;
- @apply w-bg-white w-rounded-4xl w-py-2;
+ min-height: 50px;
+ @apply w-bg-white w-rounded-4xl;
 }
 
 .fm_invoice-form .form-box{
@@ -476,7 +524,7 @@ export default {
     w-select-none;
 }
 .fm_invoice-form .label-text {
-     @apply  w-text-lg ;
+     @apply  w-text-base ;
     line-height: 1.25rem;
 }
 .fm_invoice-form .checkbox {
@@ -513,6 +561,39 @@ export default {
  @apply w-text-red-500 w-font-bold w-transition-all;
 }
 
+.gg-spinner {
+    transform: scale(var(--ggs,1))
+}
+.gg-spinner,
+.gg-spinner::after,
+.gg-spinner::before {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px
+}
+.gg-spinner::after,
+.gg-spinner::before {
+    content: "";
+    position: absolute;
+    border-radius: 100px
+}
+.gg-spinner::before {
+    animation: spinner 1s
+    cubic-bezier(.6,0,.4,1) infinite;
+    border: 3px solid transparent;
+    border-top-color: currentColor
+}
+.gg-spinner::after {
+    border: 3px solid;
+    opacity: .2
+}
+@keyframes spinner {
+    0% { transform: rotate(0deg) }
+    to { transform: rotate(359deg) }
+}
+
 @media (max-width: 639.9px){
 
     .fm_invoice-form .form-title {
@@ -523,6 +604,11 @@ export default {
         @apply  w-text-sm ;
         line-height: 1.25rem;
     }
+
+.fm_invoice-form input[type='text'],
+.fm_invoice-form input[type='email'] {
+     @apply  w-p-0 w-h-full w-w-full w-mx-6 w-border-0 w-text-base;
+}
 
 }
 

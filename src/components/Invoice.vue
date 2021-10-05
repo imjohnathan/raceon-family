@@ -8,7 +8,7 @@
             <div class="w-px-6 <sm:(w-pt-6 w-px-8)">
               <img src="../assets/fm_invoice_sample.png" />
               <div class="w-text-center w-text-lg w-pt-4">發票示意</div>
-              <p>於實體通路購買並使用載具者請向業者索取交易明細。<br>建議可將購買發票拍照留存。</p>
+              <p>本活動發票須為實體發票及須登錄發票隨機碼，請務必保留實體發票以兌獎。<br>載具發票不得參與。<br>建議可將購買發票拍照留存。</p>
             </div>
             <hr class="w-mx-4 w-bg-black" />
             <div>
@@ -59,10 +59,9 @@
     <div class="w-bg-[#e0e0e0]"><!--抽獎說明、注意事項-->
         <div class="w-container w-mx-auto w-py-10 w-px-6 sm:(w-py-20 w-px-24)">
 
-            <h4 class="<sm:w-text-xl">抽獎說明</h4>
-            <p class="w-text-sm sm:w-text-base">發票登錄期間以及抽獎日期（登錄發票截止時間以本網站系統主機時間為準）：</p>
+            <InvoiceParagraph :invoice-rules="invoice_rule.description" />
 
-                <div class="w-overflow-x-auto">
+                <div class="w-overflow-x-auto w-mb-8">
                     <table class="table table-striped w-text-center sm:w-text-base">
                     <thead>
                     <tr>
@@ -95,8 +94,6 @@
                     </table>
                 </div>
 
-                <p class="w-text-sm sm:w-text-base">得獎名單於抽獎後3日內於本頁公佈。</p>
-
             <InvoiceParagraph :invoice-rules="invoice_rule.notices" />
 
 
@@ -110,34 +107,34 @@
              <h3 class="w-text-2xl sm:w-text-4xl w-mb-8">中獎名單</h3>
 
 
-
-                <h4 class="<sm:w-text-lg w-text-center w-p-8  w-italic w-text-gray-500">
-                    尚未公布敬請期待。
-                    </h4>
-
-
-
-
-            <div class="w-overflow-x-auto">
-                <table class="winner-table w-table w-border-collapse w-w-full w-text-center sm:w-text-base w-mb-8">
-                <thead class="sm:w-text-lg">
-                <tr>
-                    <th>第一抽</th>
-                    <th>姓名</th>
-                    <th>電話</th>
-                    <th>發票號碼</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Apple Watch 7 40mm GPS 1組</td>
-                    <td>陳OO</td>
-                    <td>09XXXXXXXX</td>
-                    <td>TU383585</td>
-                </tr>
-                </tbody>
-                 </table>
+            <div v-if="invoice_winners.length">
+                <div v-for="table in invoice_winners" :key="table" class="w-overflow-x-auto">
+                    <table class="winner-table w-table w-border-collapse w-w-full w-text-center sm:w-text-base w-mb-8">
+                    <thead class="sm:w-text-lg">
+                    <tr>
+                        <th>{{table.title}}獎項</th>
+                        <th>姓名</th>
+                        <th>電話</th>
+                        <th>發票號碼</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="winner in table.winners" :key="winner">
+                        <td>{{winner.prize}}</td>
+                        <td>{{winner.name}}</td>
+                        <td>{{winner.phone}}</td>
+                        <td>{{winner.invoice_number}}</td>
+                    </tr>
+                    </tbody>
+                     </table>
+                </div>
             </div>
+
+            <h4 v-else class="<sm:w-text-lg w-text-center w-p-8  w-italic w-text-gray-500">
+                尚未公布敬請期待。
+                </h4>
+
+
 
 
          </div>   
@@ -157,13 +154,19 @@ import DB from "../db/db.json";
 <script>
 export default {
   data: () => ({
-      invoice_rule : DB.invoice
+      invoice_rule : DB.invoice,
+      invoice_winners:[]
   }),
   component: {
     InvoiceForm,
     InvoiceParagraph,
     Marquee
   },
+  beforeMount: function() {
+    if (typeof fm_data.invoice_winners !== 'undefined') {
+        this.invoice_winners = fm_data.invoice_winners
+    }
+  }  
 };
 </script>
 <style scoped>

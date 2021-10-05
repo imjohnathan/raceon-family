@@ -29,9 +29,9 @@
             </h2>
             <p v-html="kol.content" class="w-text-justify sm:(w-text-base w-leading-7)"></p>
           </div>
-          <div class="w-flex <sm:w-flex-col w-relative w-z-1">
+          <div class="w-flex w-flex-col w-relative w-z-1">
             <!--推薦-->
-            <div class="<sm:w-text-center">
+            <div class="w-text-center">
               <h4
                 class="
                 <sm:w-text-sm
@@ -46,23 +46,14 @@
               >
                 我最推薦
               </h4>
-              <ul
-                v-for="fav in kol.favorites"
-                :key="fav"
-                class="w-list-none w-p-0 w-m-0 w-text-base <sm:w-hidden"
-              >
-                <li>
-                  <a :href="`#fm_pr${fav.slug}`" v-smooth-scroll>{{ fav.name }}</a>
-                </li>
-              </ul>
             </div>
-            <div class="w-flex w-flex-1 w-justify-center sm:w-justify-end">
+            <div class="w-flex w-flex-1 w-justify-center">
               <!--包裝圖片-->
-              <div class="sm:w-pl-4 w-flex">
+              <div class="w-flex">
                 <template v-for="fav in kol.favorites" :key="fav">
-                  <div class="w-max-w-[72px]">
-                  <a :href="`#fm_pr${fav.slug}`" v-smooth-scroll>
-                    <img class="w-block w-w-24" :src="getSrc(fav.img)" />
+                  <div class="w-max-w-[60px]">
+                  <a :href="`#fm_pr${fav}`" v-smooth-scroll>
+                    <img class="w-block w-w-24" :src="getSrc(`fm_pr${fav}_sm.png`)" />
                   </a>
                   </div>
                 </template>
@@ -91,7 +82,7 @@ export default {
     };
   },
   beforeMount: function() {
-    if (typeof fm_data !== 'undefined') {
+    if (typeof fm_data.kols !== 'undefined') {
         this.kols = fm_data.kols;
     }
 

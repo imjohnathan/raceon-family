@@ -26,7 +26,7 @@
         w-text-base
         sm:w-text-2xl 
          w-font-normal">
-          戶外室內運動、燒腦高壓工作、親子教養活動、城市通勤奔波……<br />
+          戶外室內運動、燒腦高壓工作、親子戶外活動、城市通勤奔波……<br />
           每一天的生活就是一場場耐力賽，<br />
           <strong
             >你身體所需的 <br class="sm:w-hidden"><span class="w-text-color-[#f0d500]">保水力</span>、
@@ -51,13 +51,15 @@
         <div class="sm:w-w-11/12">
           <div class="w-aspect-w-16 w-aspect-h-9">
             <iframe
+            v-if="youtube"
               width="100%"
-              :src="video"
+              :src="`https://www.youtube.com/embed/${youtube}?controls=0&autoplay=1&mute=1`"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <img v-if="!youtube" :src="img"/>
           </div>
         </div>
       </div>
@@ -71,10 +73,19 @@ import Marquee from "./Marquee.vue";
 
 <script>
 export default {
-  component:{ Marquee },
-    props: {
-        video: String
+ component:{ Marquee },
+ data() {
+    return {
+      youtube: '',
+      img: ''
     }
+  },
+  beforeMount: function() {
+    if (typeof fm_data.brief !== 'undefined') {
+        this.youtube = fm_data.brief.youtube
+        this.img =  fm_data.brief.img
+    }
+  }  
 };
 </script>
 <style lang=""></style>

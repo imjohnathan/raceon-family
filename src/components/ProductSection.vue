@@ -36,7 +36,7 @@
                     sm:(w-px-6 w-py-2 w-text-xl)
                     w-rounded-full
                     w-transition-all 
-                    w-cursor-pointer">包裝規格</div>
+                    w-cursor-pointer">成分規格</div>
                     </div>
                   </div>
               <div class="sm:w-w-3/5 w-flex w-flex-col">
@@ -48,7 +48,7 @@
                   </div>
                   <div class="w-mb-2 w-text-sm sm:w-text-lg <sm:(w-text-center w-my-4)">
                     定價：<span :class="{ 'w-line-through' : product.promoprice }">${{product.price}}</span>
-                    <template v-if="product.promoprice">&emsp;&emsp;新品優惠價：${{product.promoprice}}</template>
+                    <template v-if="product.promoprice">&emsp;&emsp;新品優惠中，請洽全家超商</template>
                     </div>
                   </div>
                 <div class="w-flex sm:w-mb-20 w-border-0 w-border-b-1 w-border-t-1 w-border-solid">
@@ -92,7 +92,8 @@
       :visible="visible"
       :imgs="imgs"
       @hide="handleHide"
-    ></vue-easy-lightbox>
+    >
+    </vue-easy-lightbox>
 
 </template>
 

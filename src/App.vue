@@ -7,7 +7,7 @@
     </section>
 
     <section>
-      <BreifVideo :video="youtube" />
+      <BreifVideo />
     </section>
 
     <div v-scroll-spy="{offset: 80}">
@@ -36,12 +36,12 @@
         </section>
 
 
-      <section id="sec7">
+      <section>
         <Title title="購買通路" />
       <SalesVendor />
       </section>
 
-      <section id="sec8">
+      <section id="invoice">
         <Title title="發票登錄抽獎活動" />
         <Invoice />
       </section>
@@ -54,7 +54,6 @@
       </div>
     </section>
   </main>
-{{google}} hihi
 </template>
 <script setup>
 //component
@@ -89,16 +88,10 @@ export default {
   data: function () {
     return {
       youtube: '',
-      google: ''
     };
   },
   beforeMount: function() {
-    this.youtube = document.querySelector('#app').getAttribute('data-youtube');
-
-    if (typeof fm_data !== 'undefined') {
-        this.google = fm_data;
-    }
-
+    //this.youtube = document.querySelector('#app').getAttribute('data-youtube');
   }  
 };
 </script>
