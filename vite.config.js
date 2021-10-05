@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import compress from 'vite-plugin-compress'
+import legacy from '@vitejs/plugin-legacy'
 
 
 // https://vitejs.dev/config/
@@ -16,8 +17,12 @@ export default defineConfig({
         quality: [0.3, 0.5]
        }
      }),
+     legacy({
+      targets: ['defaults', 'not IE 11']
+    })
   ],
   build: {
+    assetsDir: '',
     rollupOptions: {
       output: {
         entryFileNames: `fm_[name].js`,

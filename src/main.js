@@ -14,7 +14,7 @@ const app = createApp(App)
 .mixin(getImg)
 .use(VueSmoothScroll,{updateHistory: false, offset: -80,})
 .use(VueAxios, axios)
-.use(VueReCaptcha, { siteKey: '6LfjNnIcAAAAAHELMJw_nXOebz0NZhIYmybdXKH1' })
+.use(VueReCaptcha, { siteKey: '6LfjNnIcAAAAAHELMJw_nXOebz0NZhIYmybdXKH1', loaderOptions: {autoHideBadge: true} })
 
 registerScrollSpy(app)
 

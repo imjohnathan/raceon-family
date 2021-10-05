@@ -4,7 +4,8 @@
       <div v-for="(kol, key) in kols" :key="kol" class="<sm:(w-flex-shrink-0) kol-width w-flex w-flex-col <sm:odd:w-bg-gray-100">
         <div class="w-aspect-w-16 w-aspect-h-9 sm:(w-aspect-w-1 w-aspect-h-1) w-bg-gray-500">
           <!--KOL圖片-->
-          <img class="w-object-cover" :src="getSrc(kol.avatar)" />
+          <img class="w-object-cover" 
+          :src="kol.avatar.includes('//') ? kol.avatar : getSrc(kol.avatar)" />
         </div>
         <div
           :class="{
@@ -89,6 +90,12 @@ export default {
       kols: DB.kols
     };
   },
+  beforeMount: function() {
+    if (typeof fm_data !== 'undefined') {
+        this.kols = fm_data.kols;
+    }
+
+  }  
 };
 </script>
 <style scoped>

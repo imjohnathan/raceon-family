@@ -14,6 +14,11 @@
   resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.15.7.tgz"
   integrity sha512-rycZXvQ+xS9QyIcJ9HXeDWf1uxqlbVFAUq0Rq0dbc50Zb/+wUe/ehyfzGfm9KZZF0kBejYgxltBXocP+gKdL2g==
 
+"@babel/standalone@^7.15.7":
+  version "7.15.7"
+  resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.15.7.tgz#97c04d0dda7c3b2b8d2679957d619ac581471d4d"
+  integrity sha512-1dPLi+eQEJE0g1GnUM0Ik2GcS5SMXivoxt6meQxQxGWEd/DCdSBRJClUVlQ25Vbqe49g1HG5Ej0ULhmsqtSMmg==
+
 "@cush/relative@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@cush/relative/-/relative-1.0.0.tgz"
@@ -102,6 +107,17 @@
   version "4.5.2"
   resolved "https://registry.npmjs.org/@vee-validate/rules/-/rules-4.5.2.tgz"
   integrity sha512-gulGJ1nkAjKsBsFOXV/qNLfleUmzyauD/sMqp7ukzyPgAUEWkx+p1Y6bFsQXx1LEzP1mHhjzLbf5F6XfvfLuKg==
+
+"@vitejs/plugin-legacy@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-legacy/-/plugin-legacy-1.6.0.tgz#08132c24873ee4a3f889a6bd165877262e9f1768"
+  integrity sha512-MrOT7DWJyln10Eobh38TL9Pg0yDjRec5ZlK0Opi+jZA/qniXgofvGJskOyvfbSKKmUkjLO2dUDLz2rIm2oIYtw==
+  dependencies:
+    "@babel/standalone" "^7.15.7"
+    core-js "^3.18.1"
+    magic-string "^0.25.7"
+    regenerator-runtime "^0.13.9"
+    systemjs "^6.10.3"
 
 "@vitejs/plugin-vue@^1.9.0":
   version "1.9.2"
@@ -308,11 +324,6 @@ base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
-
-bezier-easing@^2.0.3:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/bezier-easing/-/bezier-easing-2.1.0.tgz"
-  integrity sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY=
 
 bin-build@^3.0.0:
   version "3.0.0"
@@ -593,7 +604,7 @@ content-disposition@^0.5.2:
   dependencies:
     safe-buffer "5.1.2"
 
-core-js@^3.7.0:
+core-js@^3.18.1, core-js@^3.7.0:
   version "3.18.1"
   resolved "https://registry.npmjs.org/core-js/-/core-js-3.18.1.tgz"
   integrity sha512-vJlUi/7YdlCZeL6fXvWNaLUPh/id12WXj3MbkMw5uOyF0PfWPBNOCNbs53YqgrvtujLNlt9JQpruyIKkUZ+PKA==
@@ -692,7 +703,7 @@ date-fns-tz@^1.0.12:
   resolved "https://registry.npmjs.org/date-fns-tz/-/date-fns-tz-1.1.6.tgz"
   integrity sha512-nyy+URfFI3KUY7udEJozcoftju+KduaqkVfwyTIE0traBiVye09QnyWKLZK7drRr5h9B7sPJITmQnS3U6YOdQg==
 
-date-fns@^2.16.1, date-fns@^2.22.1:
+date-fns@^2.16.1:
   version "2.24.0"
   resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.24.0.tgz"
   integrity sha512-6ujwvwgPID6zbI0o7UbURi2vlLDR9uP26+tW6Lg+Ji3w7dd0i3DOcjcClLjLPranT60SSEFBwdSyYwn/ZkPIuw==
@@ -1128,15 +1139,6 @@ fs-constants@^1.0.0:
   resolved "https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
-fs-extra@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
-  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
@@ -1306,7 +1308,7 @@ got@^8.3.1:
     url-parse-lax "^3.0.0"
     url-to-options "^1.0.1"
 
-graceful-fs@^4.1.10, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.2:
+graceful-fs@^4.1.10, graceful-fs@^4.1.2, graceful-fs@^4.2.2:
   version "4.2.8"
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.8.tgz"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
@@ -1661,15 +1663,6 @@ json-buffer@3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.0.tgz"
   integrity sha1-Wx85evx11ne96Lz8Dkfh+aPZqJg=
-
-jsonfile@^6.0.1:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
-  integrity sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==
-  dependencies:
-    universalify "^2.0.0"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
 
 junk@^3.1.0:
   version "3.1.0"
@@ -2317,6 +2310,11 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
+regenerator-runtime@^0.13.9:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
+
 repeating@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/repeating/-/repeating-2.0.1.tgz"
@@ -2667,6 +2665,11 @@ swiper@^7.0.6:
     dom7 "^4.0.0"
     ssr-window "^4.0.0"
 
+systemjs@^6.10.3:
+  version "6.10.3"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-6.10.3.tgz#7e783fccb58232f1d9eb05c7e1a661268945cade"
+  integrity sha512-mXwfLJdaADqWg1J5+Z0bGQEdcXSe+ePPTfzffMB29aVls5cXveRl0vneSV/19t3SfuUBsAraLP8W/g5u9cmYXA==
+
 tar-stream@^1.5.2:
   version "1.6.2"
   resolved "https://registry.npmjs.org/tar-stream/-/tar-stream-1.6.2.tgz"
@@ -2805,11 +2808,6 @@ unbzip2-stream@^1.0.9:
     buffer "^5.2.1"
     through "^2.3.8"
 
-universalify@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
-  integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
-
 unquote@~1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/unquote/-/unquote-1.1.1.tgz"
@@ -2898,15 +2896,6 @@ vite-plugin-compress@^2.1.0:
     recrawl-sync "^2.0.2"
     svgo "^1.3.2"
 
-vite-plugin-compression@^0.3.5:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/vite-plugin-compression/-/vite-plugin-compression-0.3.5.tgz#1e5338eb43e60128de6d6f22b2aabf0e3dc0c17f"
-  integrity sha512-W+zKccNTDRYPsM6MzbVGTX2hvnsVrxKfmGD2Z23VgqinFKhtmwGzNNFsnbslXbeTGHXclaE7MO5nm7O1cNY3ZA==
-  dependencies:
-    chalk "^4.1.2"
-    debug "^4.3.2"
-    fs-extra "^10.0.0"
-
 vite-plugin-windicss@^1.4.7:
   version "1.4.7"
   resolved "https://registry.npmjs.org/vite-plugin-windicss/-/vite-plugin-windicss-1.4.7.tgz"
@@ -2945,20 +2934,6 @@ vue-recaptcha-v3@^2.0.1:
   integrity sha512-isEDtOfHU4wWRrZZuxciAELtQmPOeEEdicPNa0f1AOyLPy3sCcBEcpFt+FOcO3RQv5unJ3Yn5NlsWtXv9rXqjg==
   dependencies:
     recaptcha-v3 "^1.8.0"
-
-vue-scrollactive@^0.9.3:
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/vue-scrollactive/-/vue-scrollactive-0.9.3.tgz#c191c6d90f6f2e572b27d9e0ab17bf8fd6da2bcd"
-  integrity sha512-W7Z2EQGDjnvgZ4h+/bpRVjiVU3bKWQDmT9f0bUL+zq3C/VSZaQiQ+qzWlMYDEpJbm13wJ6KIE6ry3HKLVyU4cQ==
-  dependencies:
-    bezier-easing "^2.0.3"
-
-vue3-datepicker@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.npmjs.org/vue3-datepicker/-/vue3-datepicker-0.2.5.tgz"
-  integrity sha512-knZCjq8320UjP1qPyJ62B08EUdRhMWbZOAR0gBWF+FRQTtkLv6SwgQdOdS1h0Xj7N8ov9thK1mD47gReXgQGkA==
-  dependencies:
-    date-fns "^2.22.1"
 
 vue3-scroll-spy@^1.0.8:
   version "1.0.8"

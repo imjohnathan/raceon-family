@@ -10,7 +10,7 @@
       <BreifVideo :video="youtube" />
     </section>
 
-    <div v-scroll-spy="{offset: 80,allowNoActive: true}">
+    <div v-scroll-spy="{offset: 80}">
 
 
         <section>
@@ -54,7 +54,7 @@
       </div>
     </section>
   </main>
-
+{{google}} hihi
 </template>
 <script setup>
 //component
@@ -94,6 +94,11 @@ export default {
   },
   beforeMount: function() {
     this.youtube = document.querySelector('#app').getAttribute('data-youtube');
+
+    if (typeof fm_data !== 'undefined') {
+        this.google = fm_data;
+    }
+
   }  
 };
 </script>
