@@ -38,6 +38,7 @@
                                 w-transition-all
                                 w-rounded-full
                                 hover:w-bg-white
+                                product_link
                             "
                             target="_blank"
                             :href="product.url"

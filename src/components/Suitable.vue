@@ -60,7 +60,7 @@ export default {
 @media (max-width: 639.9px){
 
   .suite-width{
-    width: calc(100% - 30px);
+    width: calc(100% - 60px);
   }
 
 }

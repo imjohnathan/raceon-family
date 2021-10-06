@@ -4,7 +4,7 @@
         <div class="sm:(w-grid w-grid-cols-22) w-max-w-screen-xl w-mx-auto">
             <div class="sm:w-col-span-10 w-flex w-flex-col w-bg-[#b4cedd] sm:w-px-6 w-pt-10"><!--前-->
                 <div class="w-flex w-justify-center w-pb-6"><!--標題-->
-                <h2 class="timeing-title">行程、前</h2>
+                <h2 class="timeing-title">行程前</h2>
                 </div>
 
                 <div class="w-flex w-flex-1 w-text-center <sm:w-px-4"><!--產品-->

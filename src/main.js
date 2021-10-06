@@ -12,7 +12,7 @@ import { registerScrollSpy } from 'vue3-scroll-spy'
 
 const app = createApp(App)
 .mixin(getImg)
-.use(VueSmoothScroll,{updateHistory: false, offset: -80,})
+.use(VueSmoothScroll,{updateHistory: false, offset: -75})
 .use(VueAxios, axios)
 .use(VueReCaptcha, { siteKey: '6LfjNnIcAAAAAHELMJw_nXOebz0NZhIYmybdXKH1', loaderOptions: {autoHideBadge: true} })
 

@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import compress from 'vite-plugin-compress'
 import legacy from '@vitejs/plugin-legacy'
-
+import md5 from 'md5'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -42,6 +42,11 @@ export default defineConfig({
             return id.toString().split('node_modules/')[1].split('/')[0].toString().replace('@','');
        } 
        */
+
+       if (id.includes('node_modules')) {
+        return md5(id.toString().split('node_modules/')[1].split('/')[0].toString().replace('@','')).substring(0,5);
+   } 
+
        }  
       }
     }

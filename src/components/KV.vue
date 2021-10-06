@@ -32,14 +32,15 @@
 
                 <div class="w-w-1/2 sm:(w-w-1/6) w-flex w-items-center sm:w-ml-4">
                   <div class="w-w-1/3 sm:w-w-2/5"><img src="../assets/fm_sec1_aw.png" /></div>
-                  <h2
-                    class="w-w-2/3 sm:w-w-3/5  
+                  <a
+                    class="w-block w-w-2/3 sm:w-w-3/5  
                     w-text-xs sm:w-text-base 
                     w-whitespace-nowrap 
                     w-m-0 w-font-bold"
-                  >
+                    href="#invoice"
+                  v-smooth-scroll>
                     登錄發票月月抽<br />Apple Watch 7、<br class="sm:w-hidden" />Garmin 運動手環
-                  </h2>
+                  </a>
                 </div>
 
         </div>

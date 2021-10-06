@@ -13,9 +13,9 @@
                 w-flex
                 w-space-x-6
                 w-px-4
-            ">
+            " v-scroll-spy-link>
 
-            <li v-for="nav in navs" :key="nav" v-scroll-spy-link>
+            <li v-for="nav in navs" :key="nav">
                 <a 
                 class="
                 w-text-base

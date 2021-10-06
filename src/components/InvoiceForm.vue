@@ -1,8 +1,7 @@
 <template>
   <div>
     <Form class="fm_invoice-form w-grid w-gap-y-4 md:(w-grid-cols-2 w-gap-y-4 w-gap-x-10)"
-    v-slot="{ isSubmitting, errors }"
-     @submit="submitInvoice">
+    v-slot="{ isSubmitting, errors }" @submit="submitInvoice">
 
       <div class="md:w-col-span-2 w-flex w-flex-col w-justify-center">
         <div class="form-title">
@@ -326,14 +325,15 @@
       :class="{
         'w-text-red-500' : messages.result == 'error' || Object.keys(errors).length,  
         'w-text-green-500' : messages.result == 'success'}" 
-      v-show="messages||Object.keys(errors).length">{{messages.msg}}<span v-if="Object.keys(errors).length">表單有錯誤，請確認。</span></div>
+      v-show="Object.keys(messages).length||Object.keys(errors).length">{{messages.msg}}<span v-if="!Object.keys(messages).length&&Object.keys(errors).length">表單有錯誤，請確認。</span></div>
 
       </div>
     </Form>
-    <!-- <button 
+    <!--
+  <button 
             type="submit"
             @click="submitInvoice">測試送出</button>
-    <pre>{{$data}} </pre> -->
+    <pre>{{$data}} </pre>-->
   </div>
 </template>
 <script setup>
@@ -402,6 +402,8 @@ export default {
     userinfo: [],
     products: [],
     invoice: {
+      cyb_id:'',
+      cyb_email: '',
       products: "",
       referral: "",
       name: "",
@@ -417,7 +419,7 @@ export default {
     noLogin: false,
     loading: false,
     messages: [],
-    formID:"AKfycbzSsqZhEq1FzmgyXL8dTadbiNRCNjk6qH0dfs-ekg1gBZuSB-qAzKlXL2vgfT8wwgAf"
+    formID:"AKfycbz4TFwUcW2kZnxVT5tgTLOoMZa2KyCsOCWhLCRcsHlaSoaHSqgViiz91L3100gbmjwb"
   }),
   methods:{
       async GetUserInfo(){
@@ -430,6 +432,11 @@ export default {
                 userinfo[tempArr[0]] = tempArr[1];
               }
               this.userinfo = userinfo;
+      },
+      async GetCybUser(){
+            const cyb_response = await this.axios.get("https://www.raceon.com.tw/pages/api_customer_detail.json?"+Math.random());
+            this.invoice.cyb_id = cyb_response.data.ExternalId;
+            this.invoice.cyb_email = cyb_response.data.email;
       },
        async submitInvoice(){
 
@@ -465,7 +472,7 @@ export default {
                
                 //送出表單
                 const response = await this.axios.post(`https://script.google.com/macros/s/${this.formID}/exec`, this.invoice, optionAxios)
-                 console.log(response)
+                 //console.log(response)
                  this.loading = false    
                  this.invoice.products = '';
                  this.invoice.token = '';
@@ -489,6 +496,7 @@ export default {
   },
   mounted:function() {
     this.GetUserInfo()
+    this.GetCybUser()
   },
   beforeMount: function() {
     if (typeof fm_data.formID !== 'undefined') {

@@ -12,6 +12,7 @@
     "@vee-validate/rules": "^4.5.2",
     "@vitejs/plugin-legacy": "^1.6.0",
     "axios": "^0.22.0",
+    "md5": "^2.3.0",
     "swiper": "^7.0.6",
     "v-calendar": "^3.0.0-alpha.5",
     "v-smooth-scroll": "^2.0.0-beta.1",
