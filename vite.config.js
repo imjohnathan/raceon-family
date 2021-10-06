@@ -17,12 +17,20 @@ export default defineConfig({
         quality: [0.3, 0.5]
        }
      }),
-    //  legacy({
-    //   targets: ['defaults', 'not IE 11']
-    // })
+/*       legacy({
+      targets: ['ie >= 11'],
+      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+     }) */
   ],
   build: {
     //assetsDir: '/assets/',
+    terserOptions: {
+      compress: {
+          //生产环境时移除console
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
     rollupOptions: {
       output: {
         entryFileNames: `fm_[name].js`,

@@ -1,5 +1,5 @@
 <template>
-    <div class="timing-bg">
+    <div class="timing-bg w-overflow-auto">
 
         <div class="sm:(w-grid w-grid-cols-22) w-max-w-screen-xl w-mx-auto">
             <div class="sm:w-col-span-10 w-flex w-flex-col w-bg-[#b4cedd] sm:w-px-6 w-pt-10"><!--前-->

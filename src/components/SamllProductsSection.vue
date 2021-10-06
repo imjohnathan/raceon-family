@@ -17,11 +17,11 @@
                     <div 
                     :class="[product.slug == 'vc' ? 'w-text-black' : 'w-text-white']"
                     class="w-flex <sm:w-flex-col">
-                    <div class="sm:w-w-3/5 <sm:w-order-last w-flex w-flex-col w-justify-center w-p-10 sm:w-p-20">
+                    <div class="sm:w-w-3/5 <sm:w-order-last w-flex w-flex-col w-justify-center w-p-10 sm:w-p-10 lg:w-p-20">
                         <div>
                         <!--文字內容-->
                         <h2 v-if="key == 0" v-html="product.title" class="sm:w-mb-8 <sm:(w-text-xl w-text-center) w-font-bold"></h2>
-                        <h4 class="<sm:(w-text-base w-text-center) w-font-bold w-whitespace-nowrap">{{ slide.title }}</h4>
+                        <h4 class="<sm:(w-text-base w-text-center) w-font-bold">{{ slide.title }}</h4>
                             <p 
                             v-for="(p,key) in slide.paragragh" :key="p"
                             v-html="p" 
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm:w-w-2/5">
+                    <div class="sm:(w-w-2/5 w-flex w-flex-col w-justify-center)">
                         <!--圖片-->
                         <div class="w-aspect-w-4 w-aspect-h-3 sm:(w-aspect-w-1 w-aspect-h-1.3)">
                         <img
@@ -66,8 +66,9 @@
                 <div class="
                 fmswiper 
                 w-w-full 
-                bottom-5
-                sm:(!w-w-3/5 !left-0 !bottom-12) 
+                !bottom-5
+                sm:(!w-w-3/5 !left-0 !bottom-3) 
+                lg:(!bottom-12) 
                 w-absolute w-text-center w-transition-opacity w-z-10"></div>
             </swiper>
         </div>

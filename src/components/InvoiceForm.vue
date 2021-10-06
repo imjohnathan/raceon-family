@@ -1,7 +1,12 @@
 <template>
-  <div>
+  <div class="relative">
+    <div v-if="eventOver" class="w-absolute w-inset-0 w-h-full w-w-full w-backdrop-filter w-backdrop-saturate-[180%] w-backdrop-blur-md
+    w-flex w-justify-center w-items-center
+    ">
+     <div class="w-text-3xl w-font-bold w-text-gray-600 w-text-center">活動已結束，<br class="sm:w-hidden">感謝您的支持！</div>
+    </div>
     <Form class="fm_invoice-form w-grid w-gap-y-4 md:(w-grid-cols-2 w-gap-y-4 w-gap-x-10)"
-    v-slot="{ isSubmitting, errors }" @submit="submitInvoice">
+    v-slot="{ isSubmitting, errors }" @submit="submitInvoice" @invalid-submit="onInvalidSubmit">
 
       <div class="md:w-col-span-2 w-flex w-flex-col w-justify-center">
         <div class="form-title">
@@ -419,7 +424,8 @@ export default {
     noLogin: false,
     loading: false,
     messages: [],
-    formID:"AKfycbz4TFwUcW2kZnxVT5tgTLOoMZa2KyCsOCWhLCRcsHlaSoaHSqgViiz91L3100gbmjwb"
+    formID:"AKfycbz4TFwUcW2kZnxVT5tgTLOoMZa2KyCsOCWhLCRcsHlaSoaHSqgViiz91L3100gbmjwb",
+    eventOver: false,
   }),
   methods:{
       async GetUserInfo(){
@@ -493,12 +499,27 @@ export default {
           }
             
         },
+        onInvalidSubmit({errors}) {
+          const firstField = Object.keys(errors)[0] 
+          console.log(document.getElementsByName(firstField)[0])
+          if(document.getElementsByName(firstField)[0].type == 'checkbox'){
+            console.log('scrollIntoView')
+            document.getElementsByName(firstField)[0].scrollIntoView();
+        } else {
+          console.log('focus')
+          document.getElementsByName(firstField)[0].focus();
+        }
+        },
   },
   mounted:function() {
     this.GetUserInfo()
     this.GetCybUser()
   },
   beforeMount: function() {
+    const close_time = new Date(2022, 0, 4).getTime()+100000 ;//表單關閉時間 
+    if (new Date().getTime() > close_time) { 
+        this.eventOver = true
+    }
     if (typeof fm_data.formID !== 'undefined') {
         this.formID = fm_data.formID;
     }
