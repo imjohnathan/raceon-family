@@ -1310,7 +1310,17 @@
       </div>
     </footer>
 
-
+    <script>
+      $(window).on('load', function() {  
+      if(description_modal !== undefined){
+        $('body').on('click', 'a.product_link', function() {
+            var productHandle = $(this).attr('href');
+                event.preventDefault();
+                 new_addcart_modal.popModal(productHandle);   
+        });
+       }
+   });
+</script>  
 
 
 
