@@ -7,6 +7,7 @@ import md5 from 'md5'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  //base: `https://cdn.cybassets.com/s/files/12556/theme/38737/assets/`,
   plugins: [
     vue(),
     WindiCSS(),
