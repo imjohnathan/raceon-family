@@ -1,9 +1,16 @@
 <template>
   <div class="relative">
-    <div v-if="eventOver" class="w-absolute w-inset-0 w-h-full w-w-full w-backdrop-filter w-backdrop-saturate-[180%] w-backdrop-blur-md
+    <div v-if="form.error" class="w-absolute w-inset-0 w-h-full w-w-full w-backdrop-filter w-backdrop-saturate-[180%] w-backdrop-blur-md
     w-flex w-justify-center w-items-center
     ">
-     <div class="w-text-3xl w-font-bold w-text-gray-600 w-text-center">活動已結束，<br class="sm:w-hidden">感謝您的支持！</div>
+     <div class="w-text-3xl w-font-bold w-text-gray-600 w-text-center">
+       <span v-if="form.message">
+       發生錯誤，<br class="sm:w-hidden">請重新整理頁面後再試一次。({{form.message}})
+       </span>
+       <span v-else>
+       活動已結束，<br class="sm:w-hidden">感謝您的支持！
+       </span>
+       </div>
     </div>
     <Form class="fm_invoice-form w-grid w-gap-y-4 md:(w-grid-cols-2 w-gap-y-4 w-gap-x-10)"
     v-slot="{ isSubmitting, errors }" @submit="submitInvoice" @invalid-submit="onInvalidSubmit">
@@ -424,11 +431,15 @@ export default {
     noLogin: false,
     loading: false,
     messages: [],
-    formID:"AKfycbz4TFwUcW2kZnxVT5tgTLOoMZa2KyCsOCWhLCRcsHlaSoaHSqgViiz91L3100gbmjwb",
-    eventOver: false,
+    form: {
+      id: "AKfycbz4TFwUcW2kZnxVT5tgTLOoMZa2KyCsOCWhLCRcsHlaSoaHSqgViiz91L3100gbmjwb",
+      error: false,
+      message: ''
+    },
   }),
   methods:{
       async GetUserInfo(){
+        try{
             // GET request using fetch with async/await
             const userinfo = {};
             const response = await this.axios.get("https://www.cloudflare.com/cdn-cgi/trace");
@@ -438,11 +449,25 @@ export default {
                 userinfo[tempArr[0]] = tempArr[1];
               }
               this.userinfo = userinfo;
+          }catch(e){
+              this.form.error = true
+              this.form.message = e
+          }
       },
-      async GetCybUser(){
-            const cyb_response = await this.axios.get("https://www.raceon.com.tw/pages/api_customer_detail.json?"+Math.random());
+      async GetCybUser(ts){
+          try{
+            const cyburl = import.meta.env.DEV ? '/cybinfo.json' : '/pages/api_customer_detail.json'
+            const cyb_response = await this.axios.get(cyburl+'?'+Math.random());
             this.invoice.cyb_id = cyb_response.data.ExternalId;
             this.invoice.cyb_email = cyb_response.data.email;
+            if(ts){
+                return cyb_response.data.ts
+            }
+          }catch(e){
+              this.form.error = true
+              this.form.message = e
+          }
+
       },
        async submitInvoice(){
 
@@ -477,7 +502,7 @@ export default {
                 */
                
                 //送出表單
-                const response = await this.axios.post(`https://script.google.com/macros/s/${this.formID}/exec`, this.invoice, optionAxios)
+                const response = await this.axios.post(`https://script.google.com/macros/s/${this.form.id}/exec`, this.invoice, optionAxios)
                  //console.log(response)
                  this.loading = false    
                  this.invoice.products = '';
@@ -501,27 +526,35 @@ export default {
         },
         onInvalidSubmit({errors}) {
           const firstField = Object.keys(errors)[0] 
+          const field = document.getElementsByName(firstField)[0]
           console.log(document.getElementsByName(firstField)[0])
-          if(document.getElementsByName(firstField)[0].type == 'checkbox'){
+          if(field.type == 'checkbox' || field.type == 'radio'){
             console.log('scrollIntoView')
-            document.getElementsByName(firstField)[0].scrollIntoView();
-        } else {
-          console.log('focus')
-          document.getElementsByName(firstField)[0].focus();
-        }
+            field.scrollIntoView();
+          } else {
+            console.log('focus')
+            field.focus();
+          }
         },
   },
   mounted:function() {
     this.GetUserInfo()
-    this.GetCybUser()
+    //this.GetCybUser()
   },
-  beforeMount: function() {
-    const close_time = new Date(2022, 0, 4).getTime()+100000 ;//表單關閉時間 
-    if (new Date().getTime() > close_time) { 
-        this.eventOver = true
+   beforeMount: function() {
+     let close_time = new Date(2022, 0, 4).getTime()+600000 ;//預設表單關閉時間 2022年1月4日星期二 00:10:00 GMT+08:00
+    if (typeof fm_data?.form?.close_time !== 'undefined') {
+        close_time = fm_data.form.close_time //複寫關閉時間
     }
-    if (typeof fm_data.formID !== 'undefined') {
-        this.formID = fm_data.formID;
+    this.GetCybUser(true).then(ts => {
+      console.log('ts',ts*1000,'close_time',close_time)
+      if (ts*1000 > close_time) { 
+          this.form.error = true
+      }
+    });
+
+    if (typeof fm_data?.form?.id !== 'undefined') {
+        this.form.id = fm_data.form.id;
     }
 
   }  

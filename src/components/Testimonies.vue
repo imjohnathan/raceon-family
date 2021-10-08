@@ -82,7 +82,7 @@ export default {
     };
   },
   beforeMount: function() {
-    if (typeof fm_data.kols !== 'undefined') {
+    if (typeof fm_data?.kols !== 'undefined') {
         this.kols = fm_data.kols;
     }
 

@@ -81,7 +81,7 @@ export default {
     }
   },
   beforeMount: function() {
-    if (typeof fm_data.brief !== 'undefined') {
+    if (typeof fm_data?.brief !== 'undefined') {
         this.youtube = fm_data.brief.youtube
         this.img =  fm_data.brief.img
     }

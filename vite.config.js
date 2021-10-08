@@ -37,7 +37,7 @@ export default defineConfig({
         chunkFileNames: `fm_[name].js`,
         assetFileNames: `fm_[name][extname]`,
          manualChunks(id) {
-         if (id.includes('node_modules/v-calendar')) {
+/*          if (id.includes('node_modules/v-calendar')) {
                 return id.toString().split('node_modules/')[1].split('/')[0].toString();
             }else if (id.includes('node_modules/@vue')){
                 return id.toString().split('node_modules/')[1].split('/')[0].toString().replace('@','');
@@ -49,12 +49,12 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return id.toString().split('node_modules/')[1].split('/')[0].toString().replace('@','');
        } 
-      
+       */
 
-/*        if (id.includes('node_modules')) {
+       if (id.includes('node_modules')) {
         return md5(id.toString().split('node_modules/')[1].split('/')[0].toString().replace('@','')).substring(0,5);
-   } 
- */
+      } 
+
        }  
       }
     }

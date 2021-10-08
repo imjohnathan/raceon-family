@@ -163,7 +163,7 @@ export default {
     Marquee
   },
   beforeMount: function() {
-    if (typeof fm_data.invoice_winners !== 'undefined') {
+    if (typeof fm_data?.invoice_winners !== 'undefined') {
         this.invoice_winners = fm_data.invoice_winners
     }
   }  
