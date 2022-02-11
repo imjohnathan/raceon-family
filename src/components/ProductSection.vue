@@ -47,11 +47,11 @@
                     <h3 class="w-text-lg sm:w-text-2xl w-font-normal">{{product.subtitle}}</h3>
                   </div>
                   <div class="w-mb-2 w-text-sm sm:w-text-lg <sm:(w-text-center w-my-4)">
-                    定價：<span :class="{ 'w-line-through' : product.promoprice }">${{product.price}}</span>
-                    <template v-if="product.promoprice">&emsp;&emsp;新品優惠中，請洽全家超商</template>
+                    售價：<span :class="{ 'w-line-through' : product.promoprice < product.price}">${{product.price}}</span>
+                    <template v-if="product.promoprice < product.price">&emsp;&emsp;優惠價：${{product.promoprice}}</template>
                     </div>
                   </div>
-                <div class="w-flex sm:w-mb-20 w-border-0 w-border-b-1 w-border-t-1 w-border-solid">
+                <div class="w-flex w-mb-5 w-border-0 w-border-b-1 w-border-t-1 w-border-solid">
                   <div class="w-w-1/2 sm:w-w-2/5">
                   <!--小包裝圖片-->
                     <img :src="getSrc(`fm_sec4_pr${product.id}_inside.png`)" :alt="product.title">
@@ -78,8 +78,25 @@
                     </template>
                     <!--內容物按鈕--></div>
                   </div>
-                </div>
+                    <!--加入購物車-->
+                    <div class="w-flex w-justify-center">
+                      <div 
+                      @click="showImg(getSrc(`fm_sec4_pr${product.id}_info.jpg`))"
+                      :class="{ 'hover:w-bg-[#f0d500]': product.id == 1, 'hover:w-bg-[#0096df] hover:w-text-white hover:w-border-black': product.id == 2, 'hover:w-bg-[#e50012] hover:w-text-white hover:w-border-black': product.id == 3 }" 
+                      class="
+                      w-border-1 w-border-solid
+                      w-inline-block 
+                      w-w-2/5
+                      w-text-center
+                      w-text-sm
+                      w-px-3 w-py-1
+                      sm:(w-px-6 w-py-2 w-text-xl)
+                      w-rounded-full
+                      w-transition-all 
+                      w-cursor-pointer">加入購物車</div>
+                    </div>
 
+                </div>
         
               </div>
             </div>
@@ -126,7 +143,14 @@ export default{
       handleHide() {
         this.visible = false
       }
- }
+ },
+
+  beforeMount: function() {
+    if (typeof fm_data?.products !== 'undefined') {
+        this.products = fm_data.products;
+    }
+
+  }  
 
 
 }

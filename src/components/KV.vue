@@ -23,7 +23,7 @@
             w-relative w-z-1
           "
         >
-          <div class="w-w-full">
+          <div class="w-w-full w-hidden">
             <!--全家獨家、發票抽獎-->
               <div class="w-flex w-mb-[-1rem] sm:w-mb-[-2rem]">
                 <div class="w-w-1/2 w-px-6 sm:w-px-2 sm:(w-w-1/6 w-px-0)">
